@@ -1,0 +1,57 @@
+<div class="collapse" id="exCollapsingNavbar">
+  <div class="collapse-bg p-a-1">
+    <div class="card">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <%= link_to 'News', root_path, class: "nav-link #{yield(:news_active)}" %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to 'Travel', travel_path, class: "nav-link #{yield(:travel_active)}" %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to 'Politics In Africa', politics_in_africa_path, class: "nav-link #{yield(:politics_in_africa_active)}" %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to 'My Post', authors_posts_path, class: "nav-link #{yield(:author)}" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-light bg-faded">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      News<span class="light">panel</span>
+    </a>
+    <button class="navbar-toggler hidden-sm-up pull-xs-right "type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+      &#9776;
+    </button>
+    <ul class="nav navbar-nav pull-sm-right hidden-xs-down">
+      <li class="nav-item">
+        <%= link_to 'News', root_path, class: "nav-link #{yield(:news_active)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Travel', travel_path, class: "nav-link #{yield(:travel_active)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Politics In Africa', politics_in_africa_path, class: "nav-link #{yield(:politics_in_africa_active)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'My Post', authors_posts_path, class: "nav-link #{yield(:author)}" %>
+      </li>
+    </ul>
+  </div>
+</nav>
