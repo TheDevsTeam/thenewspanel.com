@@ -42,6 +42,7 @@ gem 'jquery-rails'
 gem 'sprockets-rails', '~> 2.3', '>= 2.3.3'
 gem 'popper_js', '~> 1.12.3'
 gem 'devise'
+gem 'annotate'
 
 
 
