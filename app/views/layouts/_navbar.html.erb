@@ -1,4 +1,5 @@
-<div class="collapse" id="exCollapsingNavbar">
+
+<!-- <div class="collapse" id="exCollapsingNavbar">
   <div class="collapse-bg p-a-1">
     <div class="card">
       <ul class="list-group list-group-flush">
@@ -17,9 +18,14 @@
         <li class="list-group-item">
           <%= link_to 'Politics In Africa', politics_in_africa_path, class: "nav-link #{yield(:politics_in_africa_active)}" %>
         </li>
+        <% if author_signed_in? %>
         <li class="list-group-item">
           <%= link_to 'My Post', authors_posts_path, class: "nav-link #{yield(:author)}" %>
         </li>
+        <li class="nav-item">
+          <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "nav-link" %>
+        </li>
+        <% end %>
       </ul>
     </div>
   </div>
@@ -49,9 +55,51 @@
       <li class="nav-item">
         <%= link_to 'Politics In Africa', politics_in_africa_path, class: "nav-link #{yield(:politics_in_africa_active)}" %>
       </li>
+      <% if author_signed_in? %>
       <li class="nav-item">
         <%= link_to 'My Post', authors_posts_path, class: "nav-link #{yield(:author)}" %>
       </li>
+      <li class="nav-item">
+        <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "nav-link" %>
+      </li>
+      <%end%>
+
+    </ul>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">
+      News<span class="light">panel</span>
+    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse"  id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item" >
+        <%= link_to 'News', root_path, class: "nav-link #{yield(:news_active)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Travel', travel_path, class: "nav-link #{yield(:travel_active)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Politics In Africa', politics_in_africa_path, class: "nav-link #{yield(:politics_in_africa_active)}" %>
+      </li>
+      <% if author_signed_in? %>
+      <li class="nav-item">
+        <%= link_to 'My Post', authors_posts_path, class: "nav-link #{yield(:author)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "nav-link" %>
+      </li>
+      <%end%>
     </ul>
   </div>
 </nav>

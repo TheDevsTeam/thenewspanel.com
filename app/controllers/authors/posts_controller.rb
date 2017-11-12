@@ -5,7 +5,7 @@ module Authors
     # GET /posts
     # GET /posts.json
     def index
-      @posts = Post.most_recent
+      @posts = current_author.posts.most_recent
     end
 
     # GET /posts/1
@@ -15,7 +15,7 @@ module Authors
 
     # GET /posts/new
     def new
-      @post = Post.new
+      @post = current_author.posts.new
     end
 
     # GET /posts/1/edit
@@ -25,7 +25,7 @@ module Authors
     # POST /posts
     # POST /posts.json
     def create
-      @post = Post.new(post_params)
+      @post = current_author.posts.new(post_params)
 
       respond_to do |format|
         if @post.save

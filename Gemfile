@@ -34,6 +34,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'bootstrap', '~> 4.0.0.beta2.1'
+# gem 'bootstrap', '~> 4.0.0.alpha6'
+# gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 gem 'jquery-rails'

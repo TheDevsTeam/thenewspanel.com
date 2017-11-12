@@ -11,26 +11,56 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :post_title %>
-  </div>
-  <div class="field">
-    <%= form.label :banner_image_url %>
-    <%= form.text_field :banner_image_url, id: :post_banner_image_url %>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <% if @post.new_record? %>
+          <h4 class="card-title">New Post</h4>
+          <% else %>
+          <h4 class="card-title">
+            <b>Edit</b>
+            <span class="thin-text"><%= @post.title %></span>
+          </h4>
+          <% end %>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <div class="field">
+              <%= form.label :title %>
+              <%= form.text_field :title, class: 'form-control', id: :post_title %>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="field">
+              <%= form.label :banner_image_url %>
+              <%= form.text_field :banner_image_url, class: 'form-control', id: :post_banner_image_url %>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="field">
+              <%= form.label :description %>
+              <%= form.text_area :description, class: 'form-control', id: :post_description %>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="actions">
+              <%= form.submit "Save Post", class: 'btn btn-success btn-lg btn-block' %>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <% if @post.persisted? %>
+      <%= link_to 'Show', @post %> |
+      <% end %>
+      <%= link_to 'Back', authors_posts_path %>
+    </div>
+    <div class="col-md-8">
+      <div class="field">
+        <%= form.text_area :body, id: :post_body %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body, id: :post_body %>
-  </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :post_description %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
