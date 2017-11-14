@@ -16,20 +16,46 @@
 #
 
 class Post < ApplicationRecord
+  acts_as_taggable # Alias for acts_as_taggable_on :tags
+
   extend FriendlyId
   friendly_id :title, use: :slugged
 
   belongs_to :author
+  has_many   :comments
 
-  scope :most_recent, -> { order(id: :desc) }
-  scope :published,   -> { where(published: :true) }
+  PER_PAGE = 20
+
+  scope :most_recent, -> { order( published_at: :desc) }
+  scope :published,   -> { where(published: true) }
+  scope :recent_paginated,   -> (page){ most_recent.paginate(page: page, per_page: PER_PAGE) }
+
+  scope :list_for,    -> (page,tag) do
+    if tag.present?
+      recent_paginated(page).tagged_with(tag)
+    else
+      recent_paginated(page)
+    end
+  end
 
   def should_generate_new_friendly_id?
     title_changed?
   end
 
   def display_day_published
-    "Published on #{created_at.strftime('%-b %-d, %y')}"
+    if published_at.present?
+      "Published #{published_at.strftime('%-b %-d, %y')}"
+    else
+      "Not Published Yet!!!"
+    end
+  end
+
+  def publish
+    update(published: true, published_at: Time.now)
+  end
+
+  def unpublish
+    update(published: false, published_at: nil)
   end
 
 end

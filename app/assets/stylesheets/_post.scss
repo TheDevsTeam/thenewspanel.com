@@ -2,9 +2,10 @@
   .card {
     border: none;
     border-radius: 0;
-    border-bottom: 1px solid #181818;
+    // border-bottom: 1px solid #181818; MAY NEED IT LATER JUST FOR DIFFERENT STYLES
     height: 400px;
     margin-bottom: 20px;
+    background-color: white;
     .card-topper {
       height: 200px;
       width: 100%;
@@ -24,14 +25,32 @@
       }
       .card-title {
         font-size: 1.3rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0;
         a {
           color: black;
           text-decoration: none;
         }
       }
+
+      .tags {
+        margin-bottom: 0;
+        a {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 16px;
+        }
+      }
+
+      .published_date {
+        font-size: 0.8rem;
+        color: #787878;
+        font-weight: 300;
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+      }
       .card-text {
         font-size: 0.9rem;
+        color: black;
+        text-decoration: none;
       }
     }
   }
