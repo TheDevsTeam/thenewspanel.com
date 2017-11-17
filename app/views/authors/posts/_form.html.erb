@@ -27,6 +27,11 @@
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
             <div class="field">
+              <%= form.collection_select :category_id, Category.all, :id, :name%>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="field">
               <%= form.label :title %>
               <%= form.text_field :title, class: 'form-control', id: :post_title %>
             </div>

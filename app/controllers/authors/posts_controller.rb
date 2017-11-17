@@ -5,8 +5,13 @@ module Authors
     # GET /posts
     # GET /posts.json
     def index
-      @posts = current_author.posts.most_recent
+        @posts = current_author.posts.most_recent
     end
+    # if params[:category].blank?
+    # else
+    #   @category_id = Category.find_by(name: params[:category]).id
+    #   @posts = Post.where(category_id: @category_id).order("created_at DESC")
+    # end
 
     # GET /posts/1
     # GET /posts/1.json
@@ -80,7 +85,7 @@ module Authors
 
       # Never trust parameters from the scary internet, only allow the white list through.
       def post_params
-        params.require(:post).permit(:title, :body, :description, :banner_image_url, :tag_list)
+        params.require(:post).permit(:title, :body, :description, :banner_image_url, :tag_list, :category_id)
       end
   end
 end
