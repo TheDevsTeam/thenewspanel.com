@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-md-4">
+    <div class="card">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="field">
+            <%= label_tag :title %>
+            <%= text_field_tag :title, class: 'form-control', id: :post_title %>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="field">
+            <%= label_tag :banner_image_url %>
+            <%= text_field_tag :banner_image_url, class: 'form-control', id: :post_banner_image_url %>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="field">
+            <%= label_tag :description %>
+            <%= text_field_tag :description, class: 'form-control', id: :post_description %>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

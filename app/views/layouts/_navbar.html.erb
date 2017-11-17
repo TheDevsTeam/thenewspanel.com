@@ -68,8 +68,7 @@
   </div>
 </nav> -->
 
-<nav class="navbar navbar-expand-lg">
-<!-- navbar-light bg-light navbar navbar-dark bg-dark -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="/">
       News<span class="light">panel</span>
     </a>
@@ -97,11 +96,11 @@
 
       <li class="nav-item dropdown">
         <a  class="nav-link dropdown-toggle <%= yield(:author) %>" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Author
+          <%= current_author.display_name %>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <%= link_to 'My Post', authors_posts_path, class: "dropdown-item" %>
-          <%= link_to 'Account', '#', class: "dropdown-item" %>
+          <%= link_to 'Account', authors_account_path, class: "dropdown-item" %>
           <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "dropdown-item" %>
         </div>
 
