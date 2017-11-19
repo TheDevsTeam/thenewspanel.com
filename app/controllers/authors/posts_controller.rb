@@ -5,13 +5,13 @@ module Authors
     # GET /posts
     # GET /posts.json
     def index
+      if params[:category].blank?
         @posts = current_author.posts.most_recent
+      else
+        @category_id = Category.find_by(name: params[:category]).id
+  			@posts = Post.where(category_id: @category_id).order("created_at DESC")
+      end
     end
-    # if params[:category].blank?
-    # else
-    #   @category_id = Category.find_by(name: params[:category]).id
-    #   @posts = Post.where(category_id: @category_id).order("created_at DESC")
-    # end
 
     # GET /posts/1
     # GET /posts/1.json
