@@ -10,10 +10,11 @@
       <p class="card-text"><%= truncate(post.description, length: 130) %></p>
     </div>
     <div class="card-block">
+      <p class="published-date"><%= post.display_day_published%>by
       <p class="published-date"><%= post.display_day_published%>
          <!-- <%= post.title %> -->
        </p>
-      <%= link_to 'Read More...', post, class: 'btn btn-read' %>
+      <%= link_to 'Read More...', post.url, class: 'btn btn-read' %>
       <!-- <%= link_to 'Add your 2 cents', post, class: 'btn btn-read' %> -->
     </div>
 

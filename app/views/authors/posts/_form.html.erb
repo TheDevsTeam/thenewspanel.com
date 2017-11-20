@@ -44,6 +44,12 @@
           </li>
           <li class="list-group-item">
             <div class="field">
+              <%= form.label :url %>
+              <%= form.text_field :url, input_html: { class: 'form-control' }, placeholder: "copy and paste page link" %>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="field">
               <%= form.label :description %>
               <%= form.text_area :description, class: 'form-control', id: :post_description %>
             </div>
