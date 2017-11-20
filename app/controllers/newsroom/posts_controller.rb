@@ -3,16 +3,15 @@ module Newsroom
 
     # GET /posts
     # GET /posts.json
-    def index
-      if params[:category].blank?
-      @posts = current_author.posts.most_recent
+  def index
+    if params[:category].blank?
+      @posts = storage.list_for(params[:page], params[:tags])
     else
       @category_id = Category.find_by(name: params[:category]).id
       @posts = Post.where(category_id: @category_id).order("created_at DESC")
     end
   end
 
-  # @posts = storage.list_for(params[:page], params[:tags])
 
     # GET /posts/1
     # GET /posts/1.json
