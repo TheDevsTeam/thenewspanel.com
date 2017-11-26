@@ -2099,3 +2099,20 @@ While it's not a problem now, it could cause errors if you change the version of
  DEBUG [046afcd6] 	/home/deploy/thenewspanel.com/shared/bundle/ruby/2.4.0/gems/bootstrap-sass-3.3.7/lib/bootstrap-sass/version.rb:3: warning: already initialized constant Bootstrap::BOOTSTRAP_SHA
  DEBUG [046afcd6] 	/home/deploy/thenewspanel.com/shared/bundle/ruby/2.4.0/gems/bootstrap-4.0.0.beta2.1/lib/bootstrap/version.rb:3: warning: previous definition of BOOTSTRAP_SHA was here
   INFO [046afcd6] Finished in 2.351 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-26 16:15:37 -0500 cap production deploy:migrate
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e1855507] Running [ -d $HOME/.rbenv/versions/2.4.2 ] as deploy@96.126.107.94
+ DEBUG [e1855507] Command: [ -d $HOME/.rbenv/versions/2.4.2 ]
+ DEBUG [e1855507] Finished in 0.509 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [63280c2e] Running if test ! -d /home/deploy/thenewspanel.com/current; then echo "Directory does not exist '/home/deploy/thenewspanel.com/current'" 1>&2; false; fi as deploy@96.126.107.94
+ DEBUG [63280c2e] Command: if test ! -d /home/deploy/thenewspanel.com/current; then echo "Directory does not exist '/home/deploy/thenewspanel.com/current'" 1>&2; false; fi
+ DEBUG [63280c2e] Finished in 0.110 seconds with exit status 0 (successful).
+  INFO [83f1dc61] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as deploy@96.126.107.94
+ DEBUG [83f1dc61] Command: cd /home/deploy/thenewspanel.com/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [83f1dc61] 	/home/deploy/thenewspanel.com/shared/bundle/ruby/2.4.0/gems/bootstrap-sass-3.3.7/lib/bootstrap-sass/version.rb:2: warning: already initialized constant Bootstrap::VERSION
+ DEBUG [83f1dc61] 	/home/deploy/thenewspanel.com/shared/bundle/ruby/2.4.0/gems/bootstrap-4.0.0.beta2.1/lib/bootstrap/version.rb:2: warning: previous definition of VERSION was here
+ DEBUG [83f1dc61] 	/home/deploy/thenewspanel.com/shared/bundle/ruby/2.4.0/gems/bootstrap-sass-3.3.7/lib/bootstrap-sass/version.rb:3: warning: already initialized constant Bootstrap::BOOTSTRAP_SHA
+ DEBUG [83f1dc61] 	/home/deploy/thenewspanel.com/shared/bundle/ruby/2.4.0/gems/bootstrap-4.0.0.beta2.1/lib/bootstrap/version.rb:3: warning: previous definition of BOOTSTRAP_SHA was here
+  INFO [83f1dc61] Finished in 2.169 seconds with exit status 0 (successful).
