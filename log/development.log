@@ -637,3 +637,39 @@ Migrating to AddUrlToPosts (20171120185338)
   [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2656595364178971180)[0m
   [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-11-28 17:41:51 -0500
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Newsroom::PostsController#index as HTML
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :tag_taggings, class_name: 'ActsAsTaggableOn::Tagging'` (called from <class:Post> at /Users/Cheikhndiongue/Projects/thenewspanel.com/app/models/post.rb:19)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :tags, class_name: 'ActsAsTaggableOn::Tag'` (called from <class:Post> at /Users/Cheikhndiongue/Projects/thenewspanel.com/app/models/post.rb:19)
+  Rendering newsroom/posts/index.html.erb within layouts/author
+  [1m[36mPost Load (3.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 ORDER BY "posts"."published_at" DESC LIMIT $2 OFFSET $3[0m  [["published", "t"], ["LIMIT", 20], ["OFFSET", 0]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered newsroom/posts/index.html.erb within layouts/author (10.8ms)
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (22.7ms)
+Completed 200 OK in 842ms (Views: 713.0ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-11-28 17:41:52 -0500

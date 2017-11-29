@@ -3,7 +3,7 @@
   <head>
     <title><%= yield(:page_title) %> | NewsPanel</title>
     <%= csrf_meta_tags %>
-
+    <%= meta name="viewport"   content="width=device-width, initial-scale=1.0" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
@@ -16,7 +16,6 @@
       <p class="alert"><%= alert %></p>
     <% end %> -->
     <div class="container <%= controller_name %> <%= action_name %> ">
-
         <% if flash.any? %>
           <% flash.keys.each do |key| %>
             <div class="alert alert-<%= key.to_s %> alert-dismissible" role="alert">
