@@ -78,7 +78,7 @@
   <div class="collapse navbar-collapse"  id="navbarToggler">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item" >
-        <%= link_to 'Recent News', root_path, class: "nav-link #{yield(:news_active)}" %>
+        <%= link_to 'Top Stories', root_path, class: "nav-link #{yield(:news_active)}" %>
       </li>
       <li class="nav-item">
         <% Category.all.each do |category| %>
@@ -87,9 +87,9 @@
         </li>
         <% end %>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <%= link_to 'About Us', about_path, class: "nav-link #{yield(:about_active)}" %>
-      </li>
+      </li> -->
       <!-- <li class="nav-item">
         <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
       </li> -->
