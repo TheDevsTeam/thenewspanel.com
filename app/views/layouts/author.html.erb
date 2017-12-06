@@ -8,12 +8,35 @@
       <% end %>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta property="og:url"                content="http://www.thenewspanel.com" />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content="The NewsPanel" />
+    <meta property="og:description"        content="Description"
+    <meta property="og:image"              content="banner_image_url" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
   </head>
 
   <body>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '133367770708729',
+          xfbml      : true,
+          version    : 'v2.11'
+        });
+        FB.AppEvents.logPageView();
+      };
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+     </script>
+
     <%= render 'layouts/navbar' %>
     <!-- <% if notice || alert %>
       <p class="notice"><%= notice %></p>

@@ -14,6 +14,7 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require social-share-button
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
