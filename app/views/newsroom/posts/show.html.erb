@@ -12,9 +12,6 @@
         <h4><%= @post.author.name %></h4>
         <h6 class="bio"><%= @post.author.bio %></h6>
     </div>
-    <div class="fb-share-button" data-href="http://www.thenewspanel.com/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.thenewspanel.com%2Fposts&amp;src=sdkpreparse">Share</a></div>
-    <%= social_share_button_tag(@post.title) %>
-
     <div id="disqus_thread"></div>
     <noscript>
       Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
