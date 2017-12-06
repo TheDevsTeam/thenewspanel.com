@@ -12016,3 +12016,358 @@ Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-06 10:57:37 
 Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-06 10:57:37 -0500
 Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-06 10:57:37 -0500
 Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-06 10:57:37 -0500
+Started GET "/" for 127.0.0.1 at 2017-12-06 11:26:15 -0500
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Newsroom::PostsController#index as HTML
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :tag_taggings, class_name: 'ActsAsTaggableOn::Tagging'` (called from <class:Post> at /Users/Cheikhndiongue/Projects/thenewspanel.com/app/models/post.rb:19)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :tags, class_name: 'ActsAsTaggableOn::Tag'` (called from <class:Post> at /Users/Cheikhndiongue/Projects/thenewspanel.com/app/models/post.rb:19)
+  Rendering newsroom/posts/index.html.erb within layouts/author
+  [1m[36mPost Load (3.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 ORDER BY "posts"."published_at" DESC LIMIT $2 OFFSET $3[0m  [["published", "t"], ["LIMIT", 50], ["OFFSET", 0]]
+  [1m[36mActsAsTaggableOn::Tag Load (3.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 3], ["taggable_type", "Post"], ["context", "tags"]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of newsroom/posts/_post.html.erb [2 times] (126.7ms)
+  Rendered newsroom/posts/index.html.erb within layouts/author (249.8ms)
+  [1m[36mAuthor Load (1.8ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (135.2ms)
+Completed 200 OK in 1882ms (Views: 1642.5ms | ActiveRecord: 75.8ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:26:17 -0500
+Started GET "/" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Processing by Newsroom::PostsController#index as HTML
+  Rendering newsroom/posts/index.html.erb within layouts/author
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 ORDER BY "posts"."published_at" DESC LIMIT $2 OFFSET $3[0m  [["published", "t"], ["LIMIT", 50], ["OFFSET", 0]]
+  [1m[36mActsAsTaggableOn::Tag Load (5.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 3], ["taggable_type", "Post"], ["context", "tags"]]
+  [1m[36mActsAsTaggableOn::Tag Load (2.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of newsroom/posts/_post.html.erb [2 times] (32.7ms)
+  Rendered newsroom/posts/index.html.erb within layouts/author (45.0ms)
+  [1m[36mAuthor Load (2.0ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (14.4ms)
+Completed 200 OK in 399ms (Views: 381.5ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:40 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:50:41 -0500
+Started GET "/" for 127.0.0.1 at 2017-12-06 11:53:37 -0500
+Processing by Newsroom::PostsController#index as HTML
+  Rendering newsroom/posts/index.html.erb within layouts/author
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 ORDER BY "posts"."published_at" DESC LIMIT $2 OFFSET $3[0m  [["published", "t"], ["LIMIT", 50], ["OFFSET", 0]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 3], ["taggable_type", "Post"], ["context", "tags"]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of newsroom/posts/_post.html.erb [2 times] (12.9ms)
+  Rendered newsroom/posts/index.html.erb within layouts/author (17.9ms)
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (6.0ms)
+Completed 200 OK in 160ms (Views: 152.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-06 11:53:37 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:53:38 -0500
+Started GET "/posts/hello-cheikh" for 127.0.0.1 at 2017-12-06 11:53:49 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"hello-cheikh"}
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "hello-cheikh"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (26.1ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `user' for #<Post:0x00007fe7f11615a8>):
+    17:     <meta property="og:title" content="<%= @post.title %>" />
+    18:     <meta property="og:type" content="article" />
+    19:     <meta property="og:published_time" content="<%= @post.created_at.strftime('%Y-%m-%d %H:%M') %>" />
+    20:     <meta property="og:author" content="<%= @post.author.username if @post.user && @post.author.username %>" />
+    21:     <meta property="og:description" content="<%= truncate(strip_tags( markdown(@post.description) ), length: 50) %>" />
+    22:     <% if @post.image %>
+    23:         <%= tag :meta, property: 'og:image', content: "http://#{request.host}#{@post.image.url}" %>
+  
+app/views/newsroom/posts/show.html.erb:20:in `block in _app_views_newsroom_posts_show_html_erb___4508127379842473088_70317040071340'
+app/views/newsroom/posts/show.html.erb:16:in `_app_views_newsroom_posts_show_html_erb___4508127379842473088_70317040071340'
+Started GET "/posts/hello-cheikh" for 127.0.0.1 at 2017-12-06 11:54:34 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"hello-cheikh"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "hello-cheikh"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (12.7ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<Author:0x00007fe7efd14f78>):
+    17:     <meta property="og:title" content="<%= @post.title %>" />
+    18:     <meta property="og:type" content="article" />
+    19:     <meta property="og:published_time" content="<%= @post.created_at.strftime('%Y-%m-%d %H:%M') %>" />
+    20:     <meta property="og:author" content="<%= @post.author.username if @post.author && @post.author.username %>" />
+    21:     <meta property="og:description" content="<%= truncate(strip_tags( markdown(@post.description) ), length: 50) %>" />
+    22:     <% if @post.image %>
+    23:         <%= tag :meta, property: 'og:image', content: "http://#{request.host}#{@post.image.url}" %>
+  
+app/views/newsroom/posts/show.html.erb:20:in `block in _app_views_newsroom_posts_show_html_erb___4508127379842473088_70317068891560'
+app/views/newsroom/posts/show.html.erb:16:in `_app_views_newsroom_posts_show_html_erb___4508127379842473088_70317068891560'
+Started GET "/posts/hello-cheikh" for 127.0.0.1 at 2017-12-06 11:54:54 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"hello-cheikh"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "hello-cheikh"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (165.6ms)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `markdown' for #<#<Class:0x00007fe7ed24b030>:0x00007fe7efe6bac0>):
+    18:     <meta property="og:type" content="article" />
+    19:     <meta property="og:published_time" content="<%= @post.created_at.strftime('%Y-%m-%d %H:%M') %>" />
+    20:     <meta property="og:author" content="<%= @post.author.name if @post.author && @post.author.name %>" />
+    21:     <meta property="og:description" content="<%= truncate(strip_tags( markdown(@post.description) ), length: 50) %>" />
+    22:     <% if @post.image %>
+    23:         <%= tag :meta, property: 'og:image', content: "http://#{request.host}#{@post.image.url}" %>
+    24:     <% end %>
+  
+app/views/newsroom/posts/show.html.erb:21:in `block in _app_views_newsroom_posts_show_html_erb___4508127379842473088_70317069534080'
+app/views/newsroom/posts/show.html.erb:16:in `_app_views_newsroom_posts_show_html_erb___4508127379842473088_70317069534080'
+Started GET "/posts/hello-cheikh" for 127.0.0.1 at 2017-12-06 11:55:25 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"hello-cheikh"}
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "hello-cheikh"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (14.1ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Post:0x00007fe7ec5a5a10>):
+    19:     <meta property="og:published_time" content="<%= @post.created_at.strftime('%Y-%m-%d %H:%M') %>" />
+    20:     <meta property="og:author" content="<%= @post.author.name if @post.author && @post.author.name %>" />
+    21:     <meta property="og:description" content="<%= truncate(strip_tags((@post.description) ), length: 50) %>" />
+    22:     <% if @post.image %>
+    23:         <%= tag :meta, property: 'og:image', content: "http://#{request.host}#{@post.image.url}" %>
+    24:     <% end %>
+    25: <% end %>
+  
+app/views/newsroom/posts/show.html.erb:22:in `block in _app_views_newsroom_posts_show_html_erb___4508127379842473088_70317039744320'
+app/views/newsroom/posts/show.html.erb:16:in `_app_views_newsroom_posts_show_html_erb___4508127379842473088_70317039744320'
+Started GET "/posts/hello-cheikh" for 127.0.0.1 at 2017-12-06 11:55:38 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"hello-cheikh"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "hello-cheikh"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (15.7ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_url' for #<Post:0x00007fe7eced36c8>):
+    19:     <meta property="og:published_time" content="<%= @post.created_at.strftime('%Y-%m-%d %H:%M') %>" />
+    20:     <meta property="og:author" content="<%= @post.author.name if @post.author && @post.author.name %>" />
+    21:     <meta property="og:description" content="<%= truncate(strip_tags((@post.description) ), length: 50) %>" />
+    22:     <% if @post.image_url %>
+    23:         <%= tag :meta, property: 'og:image', content: "http://#{request.host}#{@post.image.url}" %>
+    24:     <% end %>
+    25: <% end %>
+  
+app/views/newsroom/posts/show.html.erb:22:in `block in _app_views_newsroom_posts_show_html_erb___4508127379842473088_70317044334220'
+app/views/newsroom/posts/show.html.erb:16:in `_app_views_newsroom_posts_show_html_erb___4508127379842473088_70317044334220'
+Started GET "/posts/hello-cheikh" for 127.0.0.1 at 2017-12-06 11:56:06 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"hello-cheikh"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "hello-cheikh"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (17.7ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_url' for #<Post:0x00007fe7f148ac70>):
+    19:     <meta property="og:published_time" content="<%= @post.created_at.strftime('%Y-%m-%d %H:%M') %>" />
+    20:     <meta property="og:author" content="<%= @post.author.name if @post.author && @post.author.name %>" />
+    21:     <meta property="og:description" content="<%= truncate(strip_tags((@post.description) ), length: 50) %>" />
+    22:     <% if @post.image_url %>
+    23:         <%= tag :meta, property: 'og:image', content: "http://#{request.host}#{@post.image.url}" %>
+    24:     <% end %>
+    25: <% end %>
+  
+app/views/newsroom/posts/show.html.erb:22:in `block in _app_views_newsroom_posts_show_html_erb___4508127379842473088_70317081119900'
+app/views/newsroom/posts/show.html.erb:16:in `_app_views_newsroom_posts_show_html_erb___4508127379842473088_70317081119900'
+Started GET "/posts/hello-cheikh" for 127.0.0.1 at 2017-12-06 11:56:37 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"hello-cheikh"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "hello-cheikh"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (10.8ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Post:0x00007fe7ecf8a648>):
+    20:     <meta property="og:author" content="<%= @post.author.name if @post.author && @post.author.name %>" />
+    21:     <meta property="og:description" content="<%= truncate(strip_tags((@post.description) ), length: 50) %>" />
+    22:     <% if @post.banner_image_url %>
+    23:         <%= tag :meta, property: 'og:image', content: "http://#{request.host}#{@post.image.url}" %>
+    24:     <% end %>
+    25: <% end %>
+    26: 
+  
+app/views/newsroom/posts/show.html.erb:23:in `block in _app_views_newsroom_posts_show_html_erb___4508127379842473088_70317046551440'
+app/views/newsroom/posts/show.html.erb:16:in `_app_views_newsroom_posts_show_html_erb___4508127379842473088_70317046551440'
+Started GET "/posts/hello-cheikh" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"hello-cheikh"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "hello-cheikh"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (3.8ms)
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (4.7ms)
+Completed 200 OK in 126ms (Views: 121.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:56:58 -0500
+Started GET "/" for 127.0.0.1 at 2017-12-06 11:57:05 -0500
+Processing by Newsroom::PostsController#index as HTML
+  Rendering newsroom/posts/index.html.erb within layouts/author
+  [1m[36mPost Load (3.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 ORDER BY "posts"."published_at" DESC LIMIT $2 OFFSET $3[0m  [["published", "t"], ["LIMIT", 50], ["OFFSET", 0]]
+  [1m[36mActsAsTaggableOn::Tag Load (2.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 3], ["taggable_type", "Post"], ["context", "tags"]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of newsroom/posts/_post.html.erb [2 times] (14.6ms)
+  Rendered newsroom/posts/index.html.erb within layouts/author (28.3ms)
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (10.2ms)
+Completed 200 OK in 168ms (Views: 144.7ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Processing by Newsroom::PostsController#index as HTML
+  Rendering newsroom/posts/index.html.erb within layouts/author
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 ORDER BY "posts"."published_at" DESC LIMIT $2 OFFSET $3[0m  [["published", "t"], ["LIMIT", 50], ["OFFSET", 0]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 3], ["taggable_type", "Post"], ["context", "tags"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of newsroom/posts/_post.html.erb [2 times] (7.4ms)
+  Rendered newsroom/posts/index.html.erb within layouts/author (10.4ms)
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (8.5ms)
+Completed 200 OK in 95ms (Views: 89.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-06 11:57:09 -0500
