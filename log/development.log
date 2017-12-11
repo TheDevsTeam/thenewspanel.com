@@ -15085,3 +15085,1011 @@ Processing by Newsroom::PostsController#show as HTML
 Completed 200 OK in 166ms (Views: 152.5ms | ActiveRecord: 5.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-11 09:30:48 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Newsroom::PostsController#index as HTML
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :tag_taggings, class_name: 'ActsAsTaggableOn::Tagging'` (called from <class:Post> at /Users/Cheikhndiongue/Projects/thenewspanel.com/app/models/post.rb:19)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :tags, class_name: 'ActsAsTaggableOn::Tag'` (called from <class:Post> at /Users/Cheikhndiongue/Projects/thenewspanel.com/app/models/post.rb:19)
+  Rendering newsroom/posts/index.html.erb within layouts/author
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 ORDER BY "posts"."published_at" DESC LIMIT $2 OFFSET $3[0m  [["published", "t"], ["LIMIT", 50], ["OFFSET", 0]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 3], ["taggable_type", "Post"], ["context", "tags"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  Rendered collection of newsroom/posts/_post.html.erb [2 times] (107.2ms)
+  Rendered newsroom/posts/index.html.erb within layouts/author (131.7ms)
+  [1m[36mAuthor Load (1.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (45.6ms)
+Completed 200 OK in 627ms (Views: 524.6ms | ActiveRecord: 29.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:49 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:30:50 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:30:50 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:30:50 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:30:50 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:30:50 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:30:52 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (22.1ms)
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (7.4ms)
+Completed 200 OK in 123ms (Views: 111.6ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:31:42 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (3.3ms)
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (5.4ms)
+Completed 200 OK in 137ms (Views: 131.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:31:43 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:31:51 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (2.9ms)
+  [1m[36mAuthor Load (1.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (10.7ms)
+Completed 200 OK in 160ms (Views: 149.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Processing by Newsroom::PostsController#show as HTML
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:31:52 -0500
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (1.0ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (10.8ms)
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (6.4ms)
+Completed 200 OK in 178ms (Views: 161.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:32:38 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (3.3ms)
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (7.3ms)
+Completed 200 OK in 96ms (Views: 91.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+  [1m[36mPost Load (7.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:32:39 -0500
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (6.3ms)
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (5.1ms)
+Completed 200 OK in 192ms (Views: 170.9ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:32:44 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (3.0ms)
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (4.9ms)
+Completed 200 OK in 87ms (Views: 81.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:34:44 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :tag_taggings, class_name: 'ActsAsTaggableOn::Tagging'` (called from <class:Post> at /Users/Cheikhndiongue/Projects/thenewspanel.com/app/models/post.rb:19)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :tags, class_name: 'ActsAsTaggableOn::Tag'` (called from <class:Post> at /Users/Cheikhndiongue/Projects/thenewspanel.com/app/models/post.rb:19)
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (81.6ms)
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (23.3ms)
+Completed 200 OK in 556ms (Views: 442.5ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:34:45 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (10.0ms)
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (8.9ms)
+Completed 200 OK in 241ms (Views: 231.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:26 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:27 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:36:27 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:36:27 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:36:27 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:36:27 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (3.3ms)
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (4.7ms)
+Completed 200 OK in 77ms (Views: 72.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:32 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:33 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:33 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:33 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:33 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:33 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:33 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:36:33 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:36:33 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:36:33 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:36:33 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:36:33 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:37:45 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (2.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (11.6ms)
+  [1m[36mAuthor Load (1.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (21.9ms)
+Completed 200 OK in 170ms (Views: 156.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:37:46 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:38:55 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (5.3ms)
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (9.4ms)
+Completed 200 OK in 209ms (Views: 203.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:38:55 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:55 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:55 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:55 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:55 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:55 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:55 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:55 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:55 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:55 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:38:56 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (3.3ms)
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (6.0ms)
+Completed 200 OK in 134ms (Views: 127.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:04 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:05 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:05 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:05 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:05 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:41:05 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:41:05 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:41:05 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:41:05 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:41:10 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (5.0ms)
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (5.8ms)
+Completed 200 OK in 151ms (Views: 135.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:41:20 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (3.3ms)
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (6.9ms)
+Completed 200 OK in 193ms (Views: 183.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:41:20 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:20 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:20 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:20 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:20 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:20 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:20 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:20 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:41:21 -0500
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:41:27 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (12.6ms)
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (6.1ms)
+Completed 200 OK in 215ms (Views: 194.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:18 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:19 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:42:19 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:42:19 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:42:19 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:42:19 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:42:19 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:44:05 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (7.0ms)
+  [1m[36mAuthor Load (1.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (10.5ms)
+Completed 200 OK in 172ms (Views: 162.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:05 -0500
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:44:05 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:05 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:05 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:05 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:05 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:44:06 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:44:50 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (3.1ms)
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (5.3ms)
+Completed 200 OK in 4252ms (Views: 4246.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:44:54 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:44:55 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:44:55 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:44:55 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:44:55 -0500
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:45:02 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:47:24 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (3.5ms)
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (10.8ms)
+Completed 200 OK in 3933ms (Views: 3926.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:47:28 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:47:29 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:47:29 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:47:29 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:47:29 -0500
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:47:37 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:49:00 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (6.0ms)
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (5.8ms)
+Completed 200 OK in 3710ms (Views: 3701.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:49:04 -0500
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:49:08 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:50:56 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (4.8ms)
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (8.9ms)
+Completed 200 OK in 195ms (Views: 186.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:50:57 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:51:00 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (9.9ms)
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (7.8ms)
+Completed 200 OK in 164ms (Views: 154.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (2.7ms)
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (5.6ms)
+Completed 200 OK in 85ms (Views: 79.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:51:14 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (3.3ms)
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (4.8ms)
+Completed 200 OK in 100ms (Views: 94.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:51:40 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:51:41 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:51:41 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:51:41 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:51:41 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:52:24 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  Rendered newsroom/posts/show.html.erb within layouts/author (0.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/Cheikhndiongue/Projects/thenewspanel.com/app/views/newsroom/posts/show.html.erb:9: syntax error, unexpected tIVAR, expecting keyword_do or '{' or '('
+ight: 450px;", image_tag @post.banner_image_url );@output_bu
+                              ^):
+  
+app/views/newsroom/posts/show.html.erb:9: syntax error, unexpected tIVAR, expecting keyword_do or '{' or '('
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (2.9ms)
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (5.9ms)
+Completed 200 OK in 125ms (Views: 120.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:53:23 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:53:24 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:53:24 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:53:24 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:53:24 -0500
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:53:31 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (15.4ms)
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (7.4ms)
+Completed 200 OK in 275ms (Views: 247.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:08 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:09 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:59:09 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:59:09 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:59:09 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:59:09 -0500
+Started GET "/posts/donald-trump-and-lavar-ball-are-perfect-for-each-other" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Processing by Newsroom::PostsController#show as HTML
+  Parameters: {"id"=>"donald-trump-and-lavar-ball-are-perfect-for-each-other"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."published" = $1 AND "posts"."slug" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["published", "t"], ["slug", "donald-trump-and-lavar-ball-are-perfect-for-each-other"], ["LIMIT", 1]]
+  Rendering newsroom/posts/show.html.erb within layouts/author
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered newsroom/posts/show.html.erb within layouts/author (4.2ms)
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = $1 ORDER BY "authors"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered layouts/_navbar.html.erb (8.2ms)
+Completed 200 OK in 117ms (Views: 112.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/jquery3.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/popper.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/bootstrap/dropdown.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/bootstrap/tab.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/bootstrap/carousel.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/bootstrap/popover.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/bootstrap/modal.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/bootstrap/tooltip.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/bootstrap/button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/bootstrap/scrollspy.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/bootstrap/collapse.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/bootstrap-sprockets.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/social-share-button.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/turbolinks.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/action_cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/articles.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/google_analytics.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:13 -0500
+Started GET "/assets/bootstrap/alert.self.js?body=1" for 127.0.0.1 at 2017-12-11 09:59:14 -0500
+Started GET "/assets/social-share-button/twitter.svg" for 127.0.0.1 at 2017-12-11 09:59:14 -0500
+Started GET "/assets/social-share-button/facebook.svg" for 127.0.0.1 at 2017-12-11 09:59:14 -0500
+Started GET "/assets/social-share-button/linkedin.svg" for 127.0.0.1 at 2017-12-11 09:59:14 -0500
+Started GET "/assets/social-share-button/pinterest.svg" for 127.0.0.1 at 2017-12-11 09:59:14 -0500
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2017-12-11 09:59:41 -0500

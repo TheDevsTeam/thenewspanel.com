@@ -5,10 +5,9 @@
   <div class="col-md-1 col-lg-2"></div>
   <div class="col-md-10 col-lg-8 text-xs-center">
     <h1> <%= @post.title %> </h1>
-    <%= link_to @post do %>
-    <div class="card-topper" style="background-image: url(<%= @post.banner_image_url %>);">
+    <div class="card-topper">
+      <%= image_tag @post.banner_image_url %>
     </div>
-    <% end %>
     <p><%= @post.display_day_published %></p>
     <%= @post.body.html_safe %>
 

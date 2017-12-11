@@ -321,6 +321,7 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  width: 700px;
 }
 
 /* line 277, /Users/Cheikhndiongue/.rvm/gems/ruby-2.3.1/gems/bootstrap-4.0.0.beta2.1/assets/stylesheets/bootstrap/_reboot.scss */
