@@ -7,22 +7,14 @@
         <meta name=”description” content=”<%= @meta_description %>”>
       <% end %>
     <%= csrf_meta_tags %>
-    <meta name="Viewport"             content="width=device-width, initial-scale=1.0">
-    <meta property="og:image"         content="<%= asset_url "https://cdn.pixabay.com/photo/2016/08/14/11/09/hand-1592415_640.jpg"%>"/>
 
-
-    <meta property="og:title" content="The Newspanel | Global Trending News">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="	http://www.thenewspanel.com/">
-    <meta property="og:site_name" content="The NewsPanel">
-    <meta property="fb:app_id" content="133367770708729">
-    <!-- <meta name="Viewport"           content="width=device-width, initial-scale=1.0">
+    <meta name="Viewport"           content="width=device-width, initial-scale=1.0">
     <meta property="og:image"       content="<%= asset_url "https://cdn.pixabay.com/photo/2016/08/14/11/09/hand-1592415_640.jpg"%>"/>
-    <meta property="og:title"       content="The NewsPanel">
+    <meta property="og:title"       content="The Newspanel | Global Trending News">
     <meta property="og:type"        content="article">
-    <meta property="og:url"         content="	http://www.thenewspanel.com/">
+    <meta property="og:url"         content="www.thenewspanel.com">
     <meta property="og:site_name"   content="The NewsPanel">
-    <meta property="fb:app_id"      content="133367770708729"> -->
+    <meta property="fb:app_id"      content="133367770708729">
     <meta property="og:description" content="The Newspanel brings together news and popular stories from the world’s most respected publishers.
       There’s a story for everyone—from politics to popular recipes, travel to tech, business to entertainment. Reading the news has never been easier especially with everything in one panel.">
 
@@ -50,6 +42,24 @@
   </head>
 
   <body>
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '133367770708729',
+      xfbml      : true,
+      version    : 'v2.11'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
     <%= render 'layouts/navbar' %>
     <!-- <% if notice || alert %>
       <p class="notice"><%= notice %></p>
