@@ -16,6 +16,7 @@
         <h6 class="bio"><%= @post.author.bio %></h6>
     </div>
     <%= social_share_button_tag(@post.title)%>
+    <%= link_to 'Share', 'https://www.facebook.com/sharer/sharer.php?u=http://www.thenewspanel.com/', target: "_blank", class: 'btn btn-primary' %>
     <div id="disqus_thread"></div>
     <noscript>
       Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
