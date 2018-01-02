@@ -22068,3 +22068,298 @@ While it's not a problem now, it could cause errors if you change the version of
   INFO [5b69198a] Running /usr/bin/env echo "Branch master (at 583a485c7750a64a3ca91ce11e9b4d1adb0bc8a6) deployed as release 20180102161419 by Cheikhndiongue" >> /home/deploy/thenewspanel.com/revisions.log as deploy@96.126.107.94
  DEBUG [5b69198a] Command: cd /home/deploy/thenewspanel.com/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env echo "Branch master (at 583a485c7750a64a3ca91ce11e9b4d1adb0bc8a6) deployed as release 20180102161419 by Cheikhndiongue" >> /home/deploy/thenewspanel.com/revisions.log )
   INFO [5b69198a] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-01-02 11:20:36 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [16b41cb4] Running [ -d $HOME/.rbenv/versions/2.4.2 ] as deploy@96.126.107.94
+ DEBUG [16b41cb4] Command: [ -d $HOME/.rbenv/versions/2.4.2 ]
+ DEBUG [16b41cb4] Finished in 0.540 seconds with exit status 0 (successful).
+  INFO [526d5bc2] Running /usr/bin/env mkdir -p /tmp as deploy@96.126.107.94
+ DEBUG [526d5bc2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /tmp )
+  INFO [526d5bc2] Finished in 0.106 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-thenewspanel.com-production-Cheikhndiongue.sh 0.0%
+  INFO Uploading /tmp/git-ssh-thenewspanel.com-production-Cheikhndiongue.sh 100.0%
+  INFO [796c4827] Running /usr/bin/env chmod 700 /tmp/git-ssh-thenewspanel.com-production-Cheikhndiongue.sh as deploy@96.126.107.94
+ DEBUG [796c4827] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env chmod 700 /tmp/git-ssh-thenewspanel.com-production-Cheikhndiongue.sh )
+  INFO [796c4827] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [3f422bdb] Running /usr/bin/env git ls-remote git@github.com:TheDevsTeam/thenewspanel.com.git HEAD as deploy@96.126.107.94
+ DEBUG [3f422bdb] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-thenewspanel.com-production-Cheikhndiongue.sh" ; /usr/bin/env git ls-remote git@github.com:TheDevsTeam/thenewspanel.com.git HEAD )
+ DEBUG [3f422bdb] 	da73f46a16a649834eb571a9a513b461871afdef	HEAD
+  INFO [3f422bdb] Finished in 0.438 seconds with exit status 0 (successful).
+  INFO [2c908399] Running /usr/bin/env mkdir -p /home/deploy/thenewspanel.com/shared /home/deploy/thenewspanel.com/releases as deploy@96.126.107.94
+ DEBUG [2c908399] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/deploy/thenewspanel.com/shared /home/deploy/thenewspanel.com/releases )
+  INFO [2c908399] Finished in 0.074 seconds with exit status 0 (successful).
+  INFO [619376f6] Running /usr/bin/env mkdir -p /home/deploy/thenewspanel.com/shared/log /home/deploy/thenewspanel.com/shared/tmp/pids /home/deploy/thenewspanel.com/shared/tmp/cache /home/deploy/thenewspanel.com/shared/tmp/sockets /home/deploy/thenewspanel.com/shared/vendor/bundle /home/deploy/thenewspanel.com/shared/public/system /home/deploy/thenewspanel.com/shared/public/uploads /home/deploy/thenewspanel.com/shared/public/assets as deploy@96.126.107.94
+ DEBUG [619376f6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/deploy/thenewspanel.com/shared/log /home/deploy/thenewspanel.com/shared/tmp/pids /home/deploy/thenewspanel.com/shared/tmp/cache /home/deploy/thenewspanel.com/shared/tmp/sockets /home/deploy/thenewspanel.com/shared/vendor/bundle /home/deploy/thenewspanel.com/shared/public/system /home/deploy/thenewspanel.com/shared/public/uploads /home/deploy/thenewspanel.com/shared/public/assets )
+  INFO [619376f6] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [67a09f8b] Running /usr/bin/env mkdir -p /home/deploy/thenewspanel.com/shared/config as deploy@96.126.107.94
+ DEBUG [67a09f8b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/deploy/thenewspanel.com/shared/config )
+  INFO [67a09f8b] Finished in 0.114 seconds with exit status 0 (successful).
+ DEBUG [371c6284] Running [ -f /home/deploy/thenewspanel.com/shared/config/database.yml ] as deploy@96.126.107.94
+ DEBUG [371c6284] Command: [ -f /home/deploy/thenewspanel.com/shared/config/database.yml ]
+ DEBUG [371c6284] Finished in 0.108 seconds with exit status 0 (successful).
+ DEBUG [a0963d47] Running [ -f /home/deploy/thenewspanel.com/shared/config/secrets.yml ] as deploy@96.126.107.94
+ DEBUG [a0963d47] Command: [ -f /home/deploy/thenewspanel.com/shared/config/secrets.yml ]
+ DEBUG [a0963d47] Finished in 0.109 seconds with exit status 0 (successful).
+ DEBUG [dfe01c51] Running [ -f /home/deploy/thenewspanel.com/current/REVISION ] as deploy@96.126.107.94
+ DEBUG [dfe01c51] Command: [ -f /home/deploy/thenewspanel.com/current/REVISION ]
+ DEBUG [dfe01c51] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [9f5fd697] Running /usr/bin/env cat /home/deploy/thenewspanel.com/current/REVISION 2>/dev/null as deploy@96.126.107.94
+ DEBUG [9f5fd697] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env cat /home/deploy/thenewspanel.com/current/REVISION 2>/dev/null )
+ DEBUG [9f5fd697] 	583a485c7750a64a3ca91ce11e9b4d1adb0bc8a6
+ DEBUG [9f5fd697] Finished in 0.113 seconds with exit status 0 (successful).
+ DEBUG [361f4f25] Running [ -f /home/deploy/thenewspanel.com/repo/HEAD ] as deploy@96.126.107.94
+ DEBUG [361f4f25] Command: [ -f /home/deploy/thenewspanel.com/repo/HEAD ]
+ DEBUG [361f4f25] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/thenewspanel.com/repo
+ DEBUG [ab0b5ea2] Running if test ! -d /home/deploy/thenewspanel.com/repo; then echo "Directory does not exist '/home/deploy/thenewspanel.com/repo'" 1>&2; false; fi as deploy@96.126.107.94
+ DEBUG [ab0b5ea2] Command: if test ! -d /home/deploy/thenewspanel.com/repo; then echo "Directory does not exist '/home/deploy/thenewspanel.com/repo'" 1>&2; false; fi
+ DEBUG [ab0b5ea2] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [85ae76c1] Running /usr/bin/env git remote set-url origin git@github.com:TheDevsTeam/thenewspanel.com.git as deploy@96.126.107.94
+ DEBUG [85ae76c1] Command: cd /home/deploy/thenewspanel.com/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-thenewspanel.com-production-Cheikhndiongue.sh" ; /usr/bin/env git remote set-url origin git@github.com:TheDevsTeam/thenewspanel.com.git )
+  INFO [85ae76c1] Finished in 0.110 seconds with exit status 0 (successful).
+  INFO [44eae3ca] Running /usr/bin/env git remote update --prune as deploy@96.126.107.94
+ DEBUG [44eae3ca] Command: cd /home/deploy/thenewspanel.com/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-thenewspanel.com-production-Cheikhndiongue.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [44eae3ca] 	Fetching origin
+ DEBUG [44eae3ca] 	From github.com:TheDevsTeam/thenewspanel.com
+   583a485..da73f46  master     -> master
+  INFO [44eae3ca] Finished in 0.838 seconds with exit status 0 (successful).
+ DEBUG [6c2e8494] Running if test ! -d /home/deploy/thenewspanel.com/repo; then echo "Directory does not exist '/home/deploy/thenewspanel.com/repo'" 1>&2; false; fi as deploy@96.126.107.94
+ DEBUG [6c2e8494] Command: if test ! -d /home/deploy/thenewspanel.com/repo; then echo "Directory does not exist '/home/deploy/thenewspanel.com/repo'" 1>&2; false; fi
+ DEBUG [6c2e8494] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [3a01cc8e] Running /usr/bin/env mkdir -p /home/deploy/thenewspanel.com/releases/20180102162038 as deploy@96.126.107.94
+ DEBUG [3a01cc8e] Command: cd /home/deploy/thenewspanel.com/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-thenewspanel.com-production-Cheikhndiongue.sh" ; /usr/bin/env mkdir -p /home/deploy/thenewspanel.com/releases/20180102162038 )
+  INFO [3a01cc8e] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [94fefbb7] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/thenewspanel.com/releases/20180102162038 as deploy@96.126.107.94
+ DEBUG [94fefbb7] Command: cd /home/deploy/thenewspanel.com/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-thenewspanel.com-production-Cheikhndiongue.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/thenewspanel.com/releases/20180102162038 )
+  INFO [94fefbb7] Finished in 0.204 seconds with exit status 0 (successful).
+ DEBUG [a0ca1318] Running if test ! -d /home/deploy/thenewspanel.com/repo; then echo "Directory does not exist '/home/deploy/thenewspanel.com/repo'" 1>&2; false; fi as deploy@96.126.107.94
+ DEBUG [a0ca1318] Command: if test ! -d /home/deploy/thenewspanel.com/repo; then echo "Directory does not exist '/home/deploy/thenewspanel.com/repo'" 1>&2; false; fi
+ DEBUG [a0ca1318] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [5fd4af41] Running /usr/bin/env git rev-list --max-count=1 master as deploy@96.126.107.94
+ DEBUG [5fd4af41] Command: cd /home/deploy/thenewspanel.com/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-thenewspanel.com-production-Cheikhndiongue.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [5fd4af41] 	da73f46a16a649834eb571a9a513b461871afdef
+ DEBUG [5fd4af41] Finished in 0.110 seconds with exit status 0 (successful).
+ DEBUG [021e938d] Running if test ! -d /home/deploy/thenewspanel.com/releases/20180102162038; then echo "Directory does not exist '/home/deploy/thenewspanel.com/releases/20180102162038'" 1>&2; false; fi as deploy@96.126.107.94
+ DEBUG [021e938d] Command: if test ! -d /home/deploy/thenewspanel.com/releases/20180102162038; then echo "Directory does not exist '/home/deploy/thenewspanel.com/releases/20180102162038'" 1>&2; false; fi
+ DEBUG [021e938d] Finished in 0.105 seconds with exit status 0 (successful).
+  INFO [950676a9] Running /usr/bin/env echo "da73f46a16a649834eb571a9a513b461871afdef" >> REVISION as deploy@96.126.107.94
+ DEBUG [950676a9] Command: cd /home/deploy/thenewspanel.com/releases/20180102162038 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env echo "da73f46a16a649834eb571a9a513b461871afdef" >> REVISION )
+  INFO [950676a9] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [a35b01a9] Running /usr/bin/env mkdir -p /home/deploy/thenewspanel.com/releases/20180102162038/config as deploy@96.126.107.94
+ DEBUG [a35b01a9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/deploy/thenewspanel.com/releases/20180102162038/config )
+  INFO [a35b01a9] Finished in 0.126 seconds with exit status 0 (successful).
+ DEBUG [7a8eac0e] Running [ -L /home/deploy/thenewspanel.com/releases/20180102162038/config/database.yml ] as deploy@96.126.107.94
+ DEBUG [7a8eac0e] Command: [ -L /home/deploy/thenewspanel.com/releases/20180102162038/config/database.yml ]
+ DEBUG [7a8eac0e] Finished in 0.115 seconds with exit status 1 (failed).
+ DEBUG [b301ba98] Running [ -f /home/deploy/thenewspanel.com/releases/20180102162038/config/database.yml ] as deploy@96.126.107.94
+ DEBUG [b301ba98] Command: [ -f /home/deploy/thenewspanel.com/releases/20180102162038/config/database.yml ]
+ DEBUG [b301ba98] Finished in 0.108 seconds with exit status 0 (successful).
+  INFO [5917b158] Running /usr/bin/env rm /home/deploy/thenewspanel.com/releases/20180102162038/config/database.yml as deploy@96.126.107.94
+ DEBUG [5917b158] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env rm /home/deploy/thenewspanel.com/releases/20180102162038/config/database.yml )
+  INFO [5917b158] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO [b48edbf7] Running /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/config/database.yml /home/deploy/thenewspanel.com/releases/20180102162038/config/database.yml as deploy@96.126.107.94
+ DEBUG [b48edbf7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/config/database.yml /home/deploy/thenewspanel.com/releases/20180102162038/config/database.yml )
+  INFO [b48edbf7] Finished in 0.118 seconds with exit status 0 (successful).
+ DEBUG [8836da62] Running [ -L /home/deploy/thenewspanel.com/releases/20180102162038/config/secrets.yml ] as deploy@96.126.107.94
+ DEBUG [8836da62] Command: [ -L /home/deploy/thenewspanel.com/releases/20180102162038/config/secrets.yml ]
+ DEBUG [8836da62] Finished in 0.111 seconds with exit status 1 (failed).
+ DEBUG [07febf63] Running [ -f /home/deploy/thenewspanel.com/releases/20180102162038/config/secrets.yml ] as deploy@96.126.107.94
+ DEBUG [07febf63] Command: [ -f /home/deploy/thenewspanel.com/releases/20180102162038/config/secrets.yml ]
+ DEBUG [07febf63] Finished in 0.117 seconds with exit status 1 (failed).
+  INFO [08c32678] Running /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/config/secrets.yml /home/deploy/thenewspanel.com/releases/20180102162038/config/secrets.yml as deploy@96.126.107.94
+ DEBUG [08c32678] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/config/secrets.yml /home/deploy/thenewspanel.com/releases/20180102162038/config/secrets.yml )
+  INFO [08c32678] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [71af9fcf] Running /usr/bin/env mkdir -p /home/deploy/thenewspanel.com/releases/20180102162038 /home/deploy/thenewspanel.com/releases/20180102162038/tmp /home/deploy/thenewspanel.com/releases/20180102162038/vendor /home/deploy/thenewspanel.com/releases/20180102162038/public as deploy@96.126.107.94
+ DEBUG [71af9fcf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/deploy/thenewspanel.com/releases/20180102162038 /home/deploy/thenewspanel.com/releases/20180102162038/tmp /home/deploy/thenewspanel.com/releases/20180102162038/vendor /home/deploy/thenewspanel.com/releases/20180102162038/public )
+  INFO [71af9fcf] Finished in 0.142 seconds with exit status 0 (successful).
+ DEBUG [b58eb91f] Running [ -L /home/deploy/thenewspanel.com/releases/20180102162038/log ] as deploy@96.126.107.94
+ DEBUG [b58eb91f] Command: [ -L /home/deploy/thenewspanel.com/releases/20180102162038/log ]
+ DEBUG [b58eb91f] Finished in 0.112 seconds with exit status 1 (failed).
+ DEBUG [907dfbde] Running [ -d /home/deploy/thenewspanel.com/releases/20180102162038/log ] as deploy@96.126.107.94
+ DEBUG [907dfbde] Command: [ -d /home/deploy/thenewspanel.com/releases/20180102162038/log ]
+ DEBUG [907dfbde] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [63c1a6e9] Running /usr/bin/env rm -rf /home/deploy/thenewspanel.com/releases/20180102162038/log as deploy@96.126.107.94
+ DEBUG [63c1a6e9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env rm -rf /home/deploy/thenewspanel.com/releases/20180102162038/log )
+  INFO [63c1a6e9] Finished in 0.115 seconds with exit status 0 (successful).
+  INFO [f9cb35d4] Running /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/log /home/deploy/thenewspanel.com/releases/20180102162038/log as deploy@96.126.107.94
+ DEBUG [f9cb35d4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/log /home/deploy/thenewspanel.com/releases/20180102162038/log )
+  INFO [f9cb35d4] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [7861cf99] Running [ -L /home/deploy/thenewspanel.com/releases/20180102162038/tmp/pids ] as deploy@96.126.107.94
+ DEBUG [7861cf99] Command: [ -L /home/deploy/thenewspanel.com/releases/20180102162038/tmp/pids ]
+ DEBUG [7861cf99] Finished in 0.113 seconds with exit status 1 (failed).
+ DEBUG [cf1b51a8] Running [ -d /home/deploy/thenewspanel.com/releases/20180102162038/tmp/pids ] as deploy@96.126.107.94
+ DEBUG [cf1b51a8] Command: [ -d /home/deploy/thenewspanel.com/releases/20180102162038/tmp/pids ]
+ DEBUG [cf1b51a8] Finished in 0.119 seconds with exit status 1 (failed).
+  INFO [9cf273e6] Running /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/tmp/pids /home/deploy/thenewspanel.com/releases/20180102162038/tmp/pids as deploy@96.126.107.94
+ DEBUG [9cf273e6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/tmp/pids /home/deploy/thenewspanel.com/releases/20180102162038/tmp/pids )
+  INFO [9cf273e6] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [77a4d139] Running [ -L /home/deploy/thenewspanel.com/releases/20180102162038/tmp/cache ] as deploy@96.126.107.94
+ DEBUG [77a4d139] Command: [ -L /home/deploy/thenewspanel.com/releases/20180102162038/tmp/cache ]
+ DEBUG [77a4d139] Finished in 0.112 seconds with exit status 1 (failed).
+ DEBUG [2ae6f2dd] Running [ -d /home/deploy/thenewspanel.com/releases/20180102162038/tmp/cache ] as deploy@96.126.107.94
+ DEBUG [2ae6f2dd] Command: [ -d /home/deploy/thenewspanel.com/releases/20180102162038/tmp/cache ]
+ DEBUG [2ae6f2dd] Finished in 0.118 seconds with exit status 1 (failed).
+  INFO [9e211baf] Running /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/tmp/cache /home/deploy/thenewspanel.com/releases/20180102162038/tmp/cache as deploy@96.126.107.94
+ DEBUG [9e211baf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/tmp/cache /home/deploy/thenewspanel.com/releases/20180102162038/tmp/cache )
+  INFO [9e211baf] Finished in 0.124 seconds with exit status 0 (successful).
+ DEBUG [df221688] Running [ -L /home/deploy/thenewspanel.com/releases/20180102162038/tmp/sockets ] as deploy@96.126.107.94
+ DEBUG [df221688] Command: [ -L /home/deploy/thenewspanel.com/releases/20180102162038/tmp/sockets ]
+ DEBUG [df221688] Finished in 0.121 seconds with exit status 1 (failed).
+ DEBUG [ce6fe2e5] Running [ -d /home/deploy/thenewspanel.com/releases/20180102162038/tmp/sockets ] as deploy@96.126.107.94
+ DEBUG [ce6fe2e5] Command: [ -d /home/deploy/thenewspanel.com/releases/20180102162038/tmp/sockets ]
+ DEBUG [ce6fe2e5] Finished in 0.116 seconds with exit status 1 (failed).
+  INFO [8d6cc6be] Running /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/tmp/sockets /home/deploy/thenewspanel.com/releases/20180102162038/tmp/sockets as deploy@96.126.107.94
+ DEBUG [8d6cc6be] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/tmp/sockets /home/deploy/thenewspanel.com/releases/20180102162038/tmp/sockets )
+  INFO [8d6cc6be] Finished in 0.112 seconds with exit status 0 (successful).
+ DEBUG [68ec9f27] Running [ -L /home/deploy/thenewspanel.com/releases/20180102162038/vendor/bundle ] as deploy@96.126.107.94
+ DEBUG [68ec9f27] Command: [ -L /home/deploy/thenewspanel.com/releases/20180102162038/vendor/bundle ]
+ DEBUG [68ec9f27] Finished in 0.109 seconds with exit status 1 (failed).
+ DEBUG [7beab756] Running [ -d /home/deploy/thenewspanel.com/releases/20180102162038/vendor/bundle ] as deploy@96.126.107.94
+ DEBUG [7beab756] Command: [ -d /home/deploy/thenewspanel.com/releases/20180102162038/vendor/bundle ]
+ DEBUG [7beab756] Finished in 0.108 seconds with exit status 1 (failed).
+  INFO [0975fbb9] Running /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/vendor/bundle /home/deploy/thenewspanel.com/releases/20180102162038/vendor/bundle as deploy@96.126.107.94
+ DEBUG [0975fbb9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/vendor/bundle /home/deploy/thenewspanel.com/releases/20180102162038/vendor/bundle )
+  INFO [0975fbb9] Finished in 0.111 seconds with exit status 0 (successful).
+ DEBUG [8c4e333b] Running [ -L /home/deploy/thenewspanel.com/releases/20180102162038/public/system ] as deploy@96.126.107.94
+ DEBUG [8c4e333b] Command: [ -L /home/deploy/thenewspanel.com/releases/20180102162038/public/system ]
+ DEBUG [8c4e333b] Finished in 0.127 seconds with exit status 1 (failed).
+ DEBUG [f2aecc12] Running [ -d /home/deploy/thenewspanel.com/releases/20180102162038/public/system ] as deploy@96.126.107.94
+ DEBUG [f2aecc12] Command: [ -d /home/deploy/thenewspanel.com/releases/20180102162038/public/system ]
+ DEBUG [f2aecc12] Finished in 0.108 seconds with exit status 1 (failed).
+  INFO [b549d119] Running /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/public/system /home/deploy/thenewspanel.com/releases/20180102162038/public/system as deploy@96.126.107.94
+ DEBUG [b549d119] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/public/system /home/deploy/thenewspanel.com/releases/20180102162038/public/system )
+  INFO [b549d119] Finished in 0.113 seconds with exit status 0 (successful).
+ DEBUG [ff2ae326] Running [ -L /home/deploy/thenewspanel.com/releases/20180102162038/public/uploads ] as deploy@96.126.107.94
+ DEBUG [ff2ae326] Command: [ -L /home/deploy/thenewspanel.com/releases/20180102162038/public/uploads ]
+ DEBUG [ff2ae326] Finished in 0.113 seconds with exit status 1 (failed).
+ DEBUG [d59af7e8] Running [ -d /home/deploy/thenewspanel.com/releases/20180102162038/public/uploads ] as deploy@96.126.107.94
+ DEBUG [d59af7e8] Command: [ -d /home/deploy/thenewspanel.com/releases/20180102162038/public/uploads ]
+ DEBUG [d59af7e8] Finished in 0.110 seconds with exit status 1 (failed).
+  INFO [6ab85682] Running /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/public/uploads /home/deploy/thenewspanel.com/releases/20180102162038/public/uploads as deploy@96.126.107.94
+ DEBUG [6ab85682] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/public/uploads /home/deploy/thenewspanel.com/releases/20180102162038/public/uploads )
+  INFO [6ab85682] Finished in 0.107 seconds with exit status 0 (successful).
+ DEBUG [ce2b04fa] Running [ -L /home/deploy/thenewspanel.com/releases/20180102162038/public/assets ] as deploy@96.126.107.94
+ DEBUG [ce2b04fa] Command: [ -L /home/deploy/thenewspanel.com/releases/20180102162038/public/assets ]
+ DEBUG [ce2b04fa] Finished in 0.107 seconds with exit status 1 (failed).
+ DEBUG [8cae8ded] Running [ -d /home/deploy/thenewspanel.com/releases/20180102162038/public/assets ] as deploy@96.126.107.94
+ DEBUG [8cae8ded] Command: [ -d /home/deploy/thenewspanel.com/releases/20180102162038/public/assets ]
+ DEBUG [8cae8ded] Finished in 0.111 seconds with exit status 0 (successful).
+  INFO [78c333d6] Running /usr/bin/env rm -rf /home/deploy/thenewspanel.com/releases/20180102162038/public/assets as deploy@96.126.107.94
+ DEBUG [78c333d6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env rm -rf /home/deploy/thenewspanel.com/releases/20180102162038/public/assets )
+  INFO [78c333d6] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [46646f8f] Running /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/public/assets /home/deploy/thenewspanel.com/releases/20180102162038/public/assets as deploy@96.126.107.94
+ DEBUG [46646f8f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/deploy/thenewspanel.com/shared/public/assets /home/deploy/thenewspanel.com/releases/20180102162038/public/assets )
+  INFO [46646f8f] Finished in 0.108 seconds with exit status 0 (successful).
+ DEBUG [f79190de] Running if test ! -d /home/deploy/thenewspanel.com/releases/20180102162038; then echo "Directory does not exist '/home/deploy/thenewspanel.com/releases/20180102162038'" 1>&2; false; fi as deploy@96.126.107.94
+ DEBUG [f79190de] Command: if test ! -d /home/deploy/thenewspanel.com/releases/20180102162038; then echo "Directory does not exist '/home/deploy/thenewspanel.com/releases/20180102162038'" 1>&2; false; fi
+ DEBUG [f79190de] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [02ee9f15] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deploy/thenewspanel.com/shared/bundle as deploy@96.126.107.94
+ DEBUG [02ee9f15] Command: cd /home/deploy/thenewspanel.com/releases/20180102162038 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deploy/thenewspanel.com/shared/bundle )
+ DEBUG [02ee9f15] 	Your Gemfile lists the gem pg (>= 0) more than once.
+You should probably keep only one of them.
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [02ee9f15] 	The following gems are missing
+ DEBUG [02ee9f15] 	 * public_suffix (3.0.0)
+ DEBUG [02ee9f15] 	 * addressable (2.5.2)
+ DEBUG [02ee9f15] 	 * net-ssh (4.2.0)
+ DEBUG [02ee9f15] 	 * net-scp (1.2.1)
+ DEBUG [02ee9f15] 	 * sshkit (1.15.1)
+ DEBUG [02ee9f15] 	 * airbrussh (1.3.0)
+ DEBUG [02ee9f15] 	 * bindex (0.5.0)
+ DEBUG [02ee9f15] 	 * byebug (9.1.0)
+ DEBUG [02ee9f15] 	 * capistrano (3.10.0)
+ DEBUG [02ee9f15] 	 * capistrano-bundler (1.3.0)
+ DEBUG [02ee9f15] 	 * capistrano-passenger (0.2.0)
+ DEBUG [02ee9f15] 	 * capistrano-rails (1.3.1)
+ DEBUG [02ee9f15] 	 * capistrano-rbenv (2.1.3)
+ DEBUG [02ee9f15] 	 * xpath (2.1.0)
+ DEBUG [02ee9f15] 	 * capybara (2.15.4)
+ DEBUG [02ee9f15] 	 * childprocess (0.8.0)
+ DEBUG [02ee9f15] 	 * ruby_dep (1.5.0)
+ DEBUG [02ee9f15] 	 * listen (3.1.5)
+ DEBUG [02ee9f15] 	 * rubyzip (1.2.1)
+ DEBUG [02ee9f15] 	 * selenium-webdriver (3.7.0)
+ DEBUG [02ee9f15] 	 * spring (2.0.2)
+ DEBUG [02ee9f15] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [02ee9f15] 	 * web-console (3.5.1)
+ DEBUG [02ee9f15] 	Install missing gems with `bundle install`
+ DEBUG [02ee9f15] Finished in 1.267 seconds with exit status 1 (failed).
+  INFO [3f944f1a] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/thenewspanel.com/shared/bundle --without development test --deployment --quiet as deploy@96.126.107.94
+ DEBUG [3f944f1a] Command: cd /home/deploy/thenewspanel.com/releases/20180102162038 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/thenewspanel.com/shared/bundle --without development test --deployment --quiet )
+  INFO [3f944f1a] Finished in 1.366 seconds with exit status 0 (successful).
+ DEBUG [fa1df301] Running if test ! -d /home/deploy/thenewspanel.com/releases/20180102162038; then echo "Directory does not exist '/home/deploy/thenewspanel.com/releases/20180102162038'" 1>&2; false; fi as deploy@96.126.107.94
+ DEBUG [fa1df301] Command: if test ! -d /home/deploy/thenewspanel.com/releases/20180102162038; then echo "Directory does not exist '/home/deploy/thenewspanel.com/releases/20180102162038'" 1>&2; false; fi
+ DEBUG [fa1df301] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [7ccf06e9] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deploy@96.126.107.94
+ DEBUG [7ccf06e9] Command: cd /home/deploy/thenewspanel.com/releases/20180102162038 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+ DEBUG [7ccf06e9] 	/home/deploy/thenewspanel.com/shared/bundle/ruby/2.4.0/gems/bootstrap-sass-3.3.7/lib/bootstrap-sass/version.rb:2: warning: already initialized constant Bootstrap::VERSION
+ DEBUG [7ccf06e9] 	/home/deploy/thenewspanel.com/shared/bundle/ruby/2.4.0/gems/bootstrap-4.0.0.beta2.1/lib/bootstrap/version.rb:2: warning: previous definition of VERSION was here
+ DEBUG [7ccf06e9] 	/home/deploy/thenewspanel.com/shared/bundle/ruby/2.4.0/gems/bootstrap-sass-3.3.7/lib/bootstrap-sass/version.rb:3: warning: already initialized constant Bootstrap::BOOTSTRAP_SHA
+ DEBUG [7ccf06e9] 	/home/deploy/thenewspanel.com/shared/bundle/ruby/2.4.0/gems/bootstrap-4.0.0.beta2.1/lib/bootstrap/version.rb:3: warning: previous definition of BOOTSTRAP_SHA was here
+ DEBUG [7ccf06e9] 	yarn install v1.3.2
+ DEBUG [7ccf06e9] 	warning You are using Node "4.2.6" which is not supported and may encounter bugs or unexpected behavior. Yarn supports the following semver range: "^4.8.0 || ^5.7.0 || ^6.2.2 || >=8.0.0"
+ DEBUG [7ccf06e9] 	info No lockfile found.
+ DEBUG [7ccf06e9] 	[1/4] Resolving packages...
+ DEBUG [7ccf06e9] 	[2/4] Fetching packages...
+ DEBUG [7ccf06e9] 	[3/4] Linking dependencies...
+ DEBUG [7ccf06e9] 	[4/4] Building fresh packages...
+ DEBUG [7ccf06e9] 	info Lockfile not saved, no dependencies.
+ DEBUG [7ccf06e9] 	Done in 0.13s.
+  INFO [7ccf06e9] Finished in 4.571 seconds with exit status 0 (successful).
+ DEBUG [c9612e94] Running if test ! -d /home/deploy/thenewspanel.com/releases/20180102162038; then echo "Directory does not exist '/home/deploy/thenewspanel.com/releases/20180102162038'" 1>&2; false; fi as deploy@96.126.107.94
+ DEBUG [c9612e94] Command: if test ! -d /home/deploy/thenewspanel.com/releases/20180102162038; then echo "Directory does not exist '/home/deploy/thenewspanel.com/releases/20180102162038'" 1>&2; false; fi
+ DEBUG [c9612e94] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [21c93ec6] Running /usr/bin/env mkdir -p /home/deploy/thenewspanel.com/releases/20180102162038/assets_manifest_backup as deploy@96.126.107.94
+ DEBUG [21c93ec6] Command: cd /home/deploy/thenewspanel.com/releases/20180102162038 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/deploy/thenewspanel.com/releases/20180102162038/assets_manifest_backup )
+  INFO [21c93ec6] Finished in 0.122 seconds with exit status 0 (successful).
+ DEBUG [7bd64fd5] Running /usr/bin/env ls /home/deploy/thenewspanel.com/releases/20180102162038/public/assets/.sprockets-manifest* as deploy@96.126.107.94
+ DEBUG [7bd64fd5] Command: cd /home/deploy/thenewspanel.com/releases/20180102162038 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ls /home/deploy/thenewspanel.com/releases/20180102162038/public/assets/.sprockets-manifest* )
+ DEBUG [7bd64fd5] 	/home/deploy/thenewspanel.com/releases/20180102162038/public/assets/.sprockets-manifest-4df6439d09cd325a85c5a4e1bd7edc3b.json
+ DEBUG [7bd64fd5] Finished in 0.135 seconds with exit status 0 (successful).
+ DEBUG [72b57c0e] Running /usr/bin/env ls /home/deploy/thenewspanel.com/releases/20180102162038/public/assets/.sprockets-manifest* as deploy@96.126.107.94
+ DEBUG [72b57c0e] Command: cd /home/deploy/thenewspanel.com/releases/20180102162038 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ls /home/deploy/thenewspanel.com/releases/20180102162038/public/assets/.sprockets-manifest* )
+ DEBUG [72b57c0e] 	/home/deploy/thenewspanel.com/releases/20180102162038/public/assets/.sprockets-manifest-4df6439d09cd325a85c5a4e1bd7edc3b.json
+ DEBUG [72b57c0e] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [2a8c97b2] Running /usr/bin/env cp /home/deploy/thenewspanel.com/releases/20180102162038/public/assets/.sprockets-manifest-4df6439d09cd325a85c5a4e1bd7edc3b.json /home/deploy/thenewspanel.com/releases/20180102162038/assets_manifest_backup as deploy@96.126.107.94
+ DEBUG [2a8c97b2] Command: cd /home/deploy/thenewspanel.com/releases/20180102162038 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env cp /home/deploy/thenewspanel.com/releases/20180102162038/public/assets/.sprockets-manifest-4df6439d09cd325a85c5a4e1bd7edc3b.json /home/deploy/thenewspanel.com/releases/20180102162038/assets_manifest_backup )
+  INFO [2a8c97b2] Finished in 0.123 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [7cfbb875] Running if test ! -d /home/deploy/thenewspanel.com/releases/20180102162038; then echo "Directory does not exist '/home/deploy/thenewspanel.com/releases/20180102162038'" 1>&2; false; fi as deploy@96.126.107.94
+ DEBUG [7cfbb875] Command: if test ! -d /home/deploy/thenewspanel.com/releases/20180102162038; then echo "Directory does not exist '/home/deploy/thenewspanel.com/releases/20180102162038'" 1>&2; false; fi
+ DEBUG [7cfbb875] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [a3f8a9e6] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as deploy@96.126.107.94
+ DEBUG [a3f8a9e6] Command: cd /home/deploy/thenewspanel.com/releases/20180102162038 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [a3f8a9e6] 	/home/deploy/thenewspanel.com/shared/bundle/ruby/2.4.0/gems/bootstrap-sass-3.3.7/lib/bootstrap-sass/version.rb:2: warning: already initialized constant Bootstrap::VERSION
+ DEBUG [a3f8a9e6] 	/home/deploy/thenewspanel.com/shared/bundle/ruby/2.4.0/gems/bootstrap-4.0.0.beta2.1/lib/bootstrap/version.rb:2: warning: previous definition of VERSION was here
+ DEBUG [a3f8a9e6] 	/home/deploy/thenewspanel.com/shared/bundle/ruby/2.4.0/gems/bootstrap-sass-3.3.7/lib/bootstrap-sass/version.rb:3: warning: already initialized constant Bootstrap::BOOTSTRAP_SHA
+ DEBUG [a3f8a9e6] 	/home/deploy/thenewspanel.com/shared/bundle/ruby/2.4.0/gems/bootstrap-4.0.0.beta2.1/lib/bootstrap/version.rb:3: warning: previous definition of BOOTSTRAP_SHA was here
+  INFO [a3f8a9e6] Finished in 2.821 seconds with exit status 0 (successful).
+  INFO [316826ec] Running /usr/bin/env ln -s /home/deploy/thenewspanel.com/releases/20180102162038 /home/deploy/thenewspanel.com/releases/current as deploy@96.126.107.94
+ DEBUG [316826ec] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/deploy/thenewspanel.com/releases/20180102162038 /home/deploy/thenewspanel.com/releases/current )
+  INFO [316826ec] Finished in 0.141 seconds with exit status 0 (successful).
+  INFO [196ebf97] Running /usr/bin/env mv /home/deploy/thenewspanel.com/releases/current /home/deploy/thenewspanel.com as deploy@96.126.107.94
+ DEBUG [196ebf97] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mv /home/deploy/thenewspanel.com/releases/current /home/deploy/thenewspanel.com )
+  INFO [196ebf97] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [e7da1564] Running /usr/bin/env ls -x /home/deploy/thenewspanel.com/releases as deploy@96.126.107.94
+ DEBUG [e7da1564] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ls -x /home/deploy/thenewspanel.com/releases )
+ DEBUG [e7da1564] 	20180102155322	20180102160017	20180102160729	20180102161041	20180102161419
+20180102162038
+ DEBUG [e7da1564] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 96.126.107.94
+ DEBUG [9db0518e] Running [ -d /home/deploy/thenewspanel.com/current ] as deploy@96.126.107.94
+ DEBUG [9db0518e] Command: [ -d /home/deploy/thenewspanel.com/current ]
+ DEBUG [9db0518e] Finished in 0.109 seconds with exit status 0 (successful).
+ DEBUG [0a39a2aa] Running /usr/bin/env readlink /home/deploy/thenewspanel.com/current as deploy@96.126.107.94
+ DEBUG [0a39a2aa] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env readlink /home/deploy/thenewspanel.com/current )
+ DEBUG [0a39a2aa] 	/home/deploy/thenewspanel.com/releases/20180102162038
+ DEBUG [0a39a2aa] Finished in 0.115 seconds with exit status 0 (successful).
+  INFO [49fd1f90] Running /usr/bin/env rm -rf /home/deploy/thenewspanel.com/releases/20180102155322 as deploy@96.126.107.94
+ DEBUG [49fd1f90] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env rm -rf /home/deploy/thenewspanel.com/releases/20180102155322 )
+  INFO [49fd1f90] Finished in 0.138 seconds with exit status 0 (successful).
+ DEBUG [9c2da4fe] Running if test ! -d /home/deploy/thenewspanel.com/releases; then echo "Directory does not exist '/home/deploy/thenewspanel.com/releases'" 1>&2; false; fi as deploy@96.126.107.94
+ DEBUG [9c2da4fe] Command: if test ! -d /home/deploy/thenewspanel.com/releases; then echo "Directory does not exist '/home/deploy/thenewspanel.com/releases'" 1>&2; false; fi
+ DEBUG [9c2da4fe] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [0b748a2e] Running /usr/bin/env echo "Branch master (at da73f46a16a649834eb571a9a513b461871afdef) deployed as release 20180102162038 by Cheikhndiongue" >> /home/deploy/thenewspanel.com/revisions.log as deploy@96.126.107.94
+ DEBUG [0b748a2e] Command: cd /home/deploy/thenewspanel.com/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env echo "Branch master (at da73f46a16a649834eb571a9a513b461871afdef) deployed as release 20180102162038 by Cheikhndiongue" >> /home/deploy/thenewspanel.com/revisions.log )
+  INFO [0b748a2e] Finished in 0.110 seconds with exit status 0 (successful).
