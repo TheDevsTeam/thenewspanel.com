@@ -16526,3 +16526,10 @@ Started GET "/assets/cable.self.js?body=1" for 127.0.0.1 at 2018-01-02 11:54:30 
 Started GET "/assets/posts.self.js?body=1" for 127.0.0.1 at 2018-01-02 11:54:30 -0500
 Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2018-01-02 11:54:30 -0500
 Started GET "/assets/bootstrap/util.self.js?body=1" for 127.0.0.1 at 2018-01-02 11:54:30 -0500
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/rochelleblowe/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/application.rb:247)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/rochelleblowe/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/application.rb:247)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/rochelleblowe/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/application.rb:247)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/rochelleblowe/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/application.rb:247)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/rochelleblowe/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/application.rb:247)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/rochelleblowe/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/application.rb:247)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/rochelleblowe/.rvm/gems/ruby-2.4.2/gems/railties-5.1.4/lib/rails/application.rb:247)
