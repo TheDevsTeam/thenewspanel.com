@@ -11,15 +11,22 @@
       <p class="card-text"><%= truncate(post.description, length: 130) %></p>
     </div>
     <div class="card-block">
-      <p class="published-date"><%= post.display_day_published%>
-      <!-- <p class="published-date">by <%= post.source%> -->
-         <!-- <%= post.title %> -->
-       </p>
-       <!-- <%= social_share_button_tag(post.title)%> -->
-      <%= link_to 'Read Story...', post.url, class: 'btn btn-read' %>
-      <%= link_to 'Comments', post, class: 'btn btn-read' %>
-      <%= link_to 'Share', 'https://www.facebook.com/sharer/sharer.php?u=http://www.thenewspanel.com/', target: "_blank", class: 'btn btn-primary' %>
+      <%= link_to post.url, class:"d-flex flex-row-reverse" do %>
+        <h5 class="waves-effect p-2">Read story <i class="fa fa-chevron-right"></i></h5>
+      <% end %>
     </div>
+    <div class="card-data">
+      <ul>
+        <li><i class="fa fa-clock-o"></i> <%= post.display_day_published%></li>
 
+        <%= link_to post, class: "btn btn-default" do %>
+        <i class="fa fa-comments fa-lg" aria-hidden="true"></i>
+        <%end %>
+        <%= link_to 'https://www.facebook.com/sharer/sharer.php?u=http://www.thenewspanel.com/', class: "btn btn-default" do %>
+        <i class="fa fa-facebook fa-lg"></i>
+        <%end %>
+        <!-- <li><a href="#"><i class="fa fa-twitter"> </i>5</a></li> -->
+      </ul>
+    </div>
   </div>
 </div>

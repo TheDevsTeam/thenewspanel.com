@@ -10,7 +10,7 @@
       margin-bottom: 0;
     }
     .card-topper {
-      height: 200px;
+      height: 250px;
       width: 100%;
       background-size: cover;
       background-position: center;
@@ -56,6 +56,26 @@
         text-decoration: none;
       }
     }
+  }
+    .card-data {
+      background-color:#343a40;
+       // #929FBA;
+      color: #fff;
+      text-align: center;
+      height: auto;
+      padding: 10px;
+        ul {
+      margin-bottom: 0;
+      font-size: .9rem;
+    }
+      ul li {
+        display: inline;
+    }
+      ul a .fa {
+      margin-left: 5px;
+      margin-right: 3px;
+    }
+
   }
 }
 
@@ -118,7 +138,7 @@ section {
  }
 
  footer {
-   background: #343a40;
+   background: #0e1215;
    width: 100%;
    overflow: hidden;
    opacity: 0.90;
