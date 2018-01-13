@@ -7,7 +7,6 @@
         <meta name=”description” content=”<%= @meta_description %>”>
       <% end %>
     <%= csrf_meta_tags %>
-
     <meta name="Viewport"           content="width=device-width, initial-scale=1.0">
     <meta property="og:image"       content="<%= asset_url "https://s17.postimg.org/ccr5g4sn3/thenewspanellogo.png"%>"/>
     <meta property="og:title"       content="The Newspanel | Global Trending News">
@@ -78,6 +77,7 @@
         <% end %>
       <%= yield %>
     </div>
+    <br>
     <footer>
 <section>
   <ul class="social">
@@ -85,7 +85,7 @@
     <a href="https://www.facebook.com/The-Newspanel-172833856644680/?modal=admin_todo_tour"><img src="http://www.w3newbie.com/wp-content/uploads/facebook1.png" alt="" /></a></li>
     <li><a href="https://twitter.com/The_Newspanel"><img src="http://www.w3newbie.com/wp-content/uploads/twitter1.png" alt="" /></a></li>
     <!-- <li><a href="https://www.youtube.com/dashboard?o=U"><img src="http://www.w3newbie.com/wp-content/uploads/youtube1.png" alt="" /></a></li> -->
-    <li> <p>Copyright &copy 2017 <%= link_to "-", author_session_path %>  <b>The NewsPanel</b><%= link_to ".", new_author_registration_path %></p>
+    <li> <p>Copyright &copy 2018 <%= link_to "-", author_session_path %>  <b>The NewsPanel</b><%= link_to ".", new_author_registration_path %></p>
 </li>
   </ul>
 </section>
