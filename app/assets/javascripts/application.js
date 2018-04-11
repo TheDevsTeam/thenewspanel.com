@@ -29,3 +29,8 @@ document.addEventListener("turbolinks:load", function() {
   });
   // ...
 });
+
+$(document).on('click', 'li', function () {
+  location.reload(true);
+  // console.log('Yeah');
+});
