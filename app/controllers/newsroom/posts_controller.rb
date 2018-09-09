@@ -9,16 +9,17 @@ module Newsroom
     else
       @category_id = Category.find_by(name: params[:category]).id
       @posts = Post.where(category_id: @category_id).order("created_at DESC")
+      @posts = Post.most_recent.published.paginate(:page => params[:page], per_page: 10)
     end
     @meta_title = meta_title 'The NewsPanel'
-    # @meta_description = ‘Global Trending News’
+    @meta_description = 'Global Trending News'
   end
 
 
     # GET /posts/1
     # GET /posts/1.json
     def show
-      @post = storage.friendly.find(params[:id])
+      @posts = storage.friendly.find(params[:id])
     end
 
     private

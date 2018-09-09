@@ -15,22 +15,15 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require social-share-button
+//= require ckeditor/init
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 
-document.addEventListener("turbolinks:load", function() {
-  tinymce.remove();
-  tinymce.init({
-    height: '480',
-    selector: 'textarea#post_body',
-    plugins: "codesample image media link code emoticons",
-    toolbar: " undo redo | stylesheet | bold italic link | codesample image media | code emoticons"
-  });
-  // ...
-});
+// cz549ota6d53mqkxvztmpe3y9zy9mu9u7s767dg2weo3okyo
 
-$(document).on('click', 'li', function () {
-  location.reload(true);
-  // console.log('Yeah');
-});
+
+// $(document).on('click', 'li', function () {
+//   location.reload(true);
+//   // console.log('Yeah');
+// });

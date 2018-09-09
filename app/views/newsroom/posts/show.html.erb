@@ -1,19 +1,19 @@
-<% provide(:page_title, @post.title) %>
+<% provide(:page_title, @posts.title) %>
 <% provide(:news_active, 'active') %>
 
 <div class="row">
   <div class="col-md-1 col-lg-2"></div>
   <div class="col-md-10 col-lg-8 text-xs-center">
-    <h1> <%= @post.title %> </h1>
+    <h1> <%= @posts.title %> </h1>
     <div class="card-topper">
-      <%= image_tag @post.banner_image_url %>
+      <%= image_tag @posts.banner_image_url %>
     </div>
-    <p><%= @post.display_day_published %></p>
-    <%= @post.body.html_safe %>
+    <p><%= @posts.display_day_published %></p>
+    <%= @posts.body.html_safe %>
 
     <div class="author-bio">
-        <h4><%= @post.author.name %></h4>
-        <h6 class="bio"><%= @post.author.bio %></h6>
+        <h4><%= @posts.author.name %></h4>
+        <h6 class="bio"><%= @posts.author.bio %></h6>
     </div>
     <div
       class="fb-like"
@@ -21,7 +21,7 @@
       data-width="450"
       data-show-faces="true">
     </div>
-    <!-- <%= social_share_button_tag(@post.title)%>
+    <!-- <%= social_share_button_tag(@posts.title)%>
     <%= link_to 'Share', 'https://www.facebook.com/sharer/sharer.php?u=http://www.thenewspanel.com/', target: "_blank", class: 'btn btn-primary' %> -->
     <div id="disqus_thread"></div>
     <noscript>
@@ -38,7 +38,7 @@
 
   var disqus_config = function () {
   this.page.url = '<%= request.original_url %>';  // Replace PAGE_URL with your page's canonical URL variable
-  this.page.identifier = '<%= @post.slug %>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  this.page.identifier = '<%= @posts.slug %>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
   };
 
   (function() { // DON'T EDIT BELOW THIS LINE

@@ -25,10 +25,11 @@ class Post < ApplicationRecord
   belongs_to :author
   has_many   :comments
 
-  PER_PAGE = 50
+  PER_PAGE = 10
 
   scope :most_recent,        -> { order( published_at: :desc) }
   scope :published,          -> { where(published: true) }
+
   scope :recent_paginated,   -> (page){ most_recent.paginate(page: page, per_page: PER_PAGE) }
 
   scope :list_for,    -> (page,tag) do

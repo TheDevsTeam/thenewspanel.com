@@ -11,9 +11,11 @@ module Authors
         @category_id = Category.find_by(name: params[:category]).id
   			@posts = Post.where(category_id: @category_id).order("created_at DESC")
       end
-      @meta_title = meta_title 'The NewsPanel'
-      # @meta_description = ‘Global Trending News’
     end
+    #
+    # @users = User.where('email LIKE ?', '%some%')
+    # @users = User.where('email LIKE ?', '%some%').paginate(page: params[:page])
+    #
 
     # GET /posts/1
     # GET /posts/1.json

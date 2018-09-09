@@ -17,10 +17,12 @@
     <meta property="og:description" content="The Newspanel brings together news and popular stories from the world’s most respected publishers.
       There’s a story for everyone—from politics to popular recipes, travel to tech, business to entertainment. Reading the news has never been easier especially with everything in one panel.">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.ckeditor.com/4.10.0/standard/ckeditor.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://cloud.tinymce.com/stable/tinymce.min.js?cz549ota6d53mqkxvztmpe3y9zy9mu9u7s767dg2weo3okyo"></script>
-    <script>tinymce.init({ selector: #mytextarea });</script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110861700-1"></script>
     <script>
@@ -80,16 +82,28 @@
     </div>
     <br>
     <footer>
-<section>
-  <ul class="social">
-    <li><p>Follow Us</p>
-    <a href="https://www.facebook.com/The-Newspanel-172833856644680/?modal=admin_todo_tour"><img src="http://www.w3newbie.com/wp-content/uploads/facebook1.png" alt="" /></a></li>
-    <li><a href="https://twitter.com/The_Newspanel"><img src="http://www.w3newbie.com/wp-content/uploads/twitter1.png" alt="" /></a></li>
-    <!-- <li><a href="https://www.youtube.com/dashboard?o=U"><img src="http://www.w3newbie.com/wp-content/uploads/youtube1.png" alt="" /></a></li> -->
-    <li> <p>Copyright &copy 2018 <%= link_to "-", author_session_path %>  <b>The NewsPanel</b><%= link_to ".", new_author_registration_path %></p>
-</li>
-  </ul>
-</section>
-</footer>
+      <div id="connect" class="container-fluid padding">
+        <!-- <div class="row text-center padding"> -->
+          <div class="col-12">
+            <h2><p>Follow Us</p></h2>
+          </div>
+          <div class=" socialCube">
+            <div class="wrap">
+              <div class="cube">
+                <div class="top"></div>
+                <div class="twitter"><a href="https://twitter.com/The_Newspanel" target="_blank" ><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+                <div class="linkedin"><a href="#" target="_blank" ><i class="fab fa-linkedin" aria-hidden="true"></i></a></div>
+                <div class="google-plus"><a href="#" target="_blank" ><i class="fab fa-google-plus"></i></a></div>
+                <div class="facebook"><a href="https://www.facebook.com/The-Newspanel-172833856644680/?modal=admin_todo_tour" target="_blank" ><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+                <div class="bottom"></div>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+        <div class="">
+          <li> <p>Copyright &copy 2018 <%= link_to "-", author_session_path %>  <b>The NewsPanel</b><%= link_to ".", new_author_registration_path %></p>
+        </div>
+      </footer>
   </body>
 </html>

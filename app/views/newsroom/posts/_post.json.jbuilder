@@ -37,7 +37,7 @@ json.url post_url(post, format: :json)
 #     </div>
 #   </div>
 # </div> -->
- # <li><a href="#"><i class="fa fa-twitter"> </i>5</a></li>
+#  <li><a href="#"><i class="fa fa-twitter"> </i>5</a></li>
 #
 #   <div class="container">
 #     <div class="row">

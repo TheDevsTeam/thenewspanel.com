@@ -22,15 +22,20 @@
 
   <div class="field">
     <%= form.label :body %>
-    <%= form.text_area :body, id: :post_body %>
+    <%= form.cktext_area :body, id: :post_body %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description, id: :post_description %>
+    <%= form.cktext_area :description, id: :post_description %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+
+  <%= form.cktext_area :notes, class: 'someclass', ckeditor: { language: 'us'} %>
+  <%= form.cktext_area :content, value: 'Default value', id: 'sometext' %>
+  <%= cktext_area :page, :info, cols: 40, ckeditor: { uiColor: '#AADC6E', toolbar: 'mini' } %>
+
 <% end %>

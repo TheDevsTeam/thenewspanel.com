@@ -4,9 +4,12 @@
 <div>
   <%= link_to 'Edit', edit_authors_post_path(@post), class: 'btn btn-sm btn-warning' %>
   <%= link_to 'Delete', authors_post_path(@post), class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: 'Are you sure?'} %>
-
+  <% if @post.published? %>
+  <td><%= link_to 'Unpublish', unpublish_authors_post_path(@post), method: :put, class: 'btn btn-sm btn-primary' %> </td>
+  <% else %>
+  <td><%= link_to 'Publish', publish_authors_post_path(@post), method: :put, class: 'btn btn-sm btn-success' %> </td>
+  <% end %>
 </div>
-
 <div class="row">
   <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-center">
     <h1> <%= @post.title %> </h1>
