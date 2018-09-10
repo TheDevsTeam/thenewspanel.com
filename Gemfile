@@ -48,6 +48,8 @@ gem 'acts-as-taggable-on', '~> 4.0'
 gem 'social-share-button'
 gem 'ckeditor'
 gem 'paperclip'
+gem 'paperclip-av-transcoder', '~> 0.6.4'
+gem 'aws-sdk-s3', '~> 1.19'
 gem 'carrierwave'
 gem 'mini_magick'
 

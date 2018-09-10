@@ -25,6 +25,23 @@ class Post < ApplicationRecord
   belongs_to :author
   has_many   :comments
 
+  has_attached_file :photo, styles:{large: "450x450", thumb: "50x50#"}
+  # validates_attachment_content_type :photo
+
+  has_attached_file :music
+  validates_attachment :music,
+  :content_type => {:content_type => ["audio/mpeg", "audio/mp3"]}
+  # :file_type  => {:matches => [/mp3\Z/]}
+
+  has_attached_file :movie, :styles =>
+  {
+    :medium => {:geometry => "640x480", :format => 'mp4'},
+    :thumb => {:geometry => "100x50#", :format => 'jpg', :time => 10},
+  },
+  :processors => [:transcoder]
+  # validates_attachment_content_type :movie
+
+
   PER_PAGE = 10
 
   scope :most_recent,        -> { order( published_at: :desc) }

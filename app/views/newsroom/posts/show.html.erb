@@ -5,12 +5,22 @@
   <div class="col-md-1 col-lg-2"></div>
   <div class="col-md-10 col-lg-8 text-xs-center">
     <h1> <%= @posts.title %> </h1>
-    <div class="card-topper">
-      <%= image_tag @posts.banner_image_url %>
-    </div>
+    <% if @posts.photo.present? %>
+      <div class="card-topper">
+        <%= image_tag(@posts.photo, style: "width:auto") %>
+      </div>
+      <% else %>
+      "No photo available."
+    <%end%>
     <p><%= @posts.display_day_published %></p>
-    <%= @posts.body.html_safe %>
 
+    <% if @posts.music.present? %>
+    <div class="author-bio">
+      <%= audio_tag(@posts.music, autoplay: true, controls: true, autoplay: false)%>
+    </div>
+    <% else %>
+    <!-- "There is no audio uploaded" -->
+    <% end %>
     <div class="author-bio">
         <h4><%= @posts.author.name %></h4>
         <h6 class="bio"><%= @posts.author.bio %></h6>

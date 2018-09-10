@@ -1,4 +1,4 @@
-<%= form_for(post, url: url) do |form| %>
+<%= form_for(post, url: url, html:{multipart: true} ) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -42,6 +42,25 @@
               <%= form.text_field :banner_image_url, class: 'form-control', id: :post_banner_image_url %>
             </div>
           </li>
+          <li class="list-group-item">
+            Or
+            <div class="field">
+              <!-- <%= form.label :photo %> -->
+              <%= form.file_field :photo, class: 'form-control', id: :post_photo %>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="field">
+              <%= form.label :audioUpload %>
+              <%= form.file_field :music, class: 'form-control', id: :post_music %>
+            </div>
+          </li>
+          <!-- <li class="list-group-item">
+            <div class="field">
+              <%= form.label :movie %>
+              <%= form.file_field :movie, class: 'form-control', id: :post_movie %>
+            </div>
+          </li> -->
           <li class="list-group-item">
             <div class="field">
               <%= form.label :url %>

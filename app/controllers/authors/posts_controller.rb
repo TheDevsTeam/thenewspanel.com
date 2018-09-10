@@ -89,7 +89,7 @@ module Authors
 
       # Never trust parameters from the scary internet, only allow the white list through.
       def post_params
-        params.require(:post).permit(:title, :body, :description, :banner_image_url, :tag_list, :category_id, :url, :source)
+        params.require(:post).permit(:title, :body, :description, :banner_image_url, :tag_list, :category_id, :url, :source, :photo, :music, :movie)
       end
   end
 end
