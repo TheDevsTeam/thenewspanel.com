@@ -70,9 +70,12 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 group :development do
-  gem 'capistrano', '~> 3.10'
-  gem 'capistrano-rails', '~> 1.3', '>= 1.3.1'
-  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.3'
+  # gem 'capistrano', '~> 3.10'
+  gem 'capistrano', '~> 3.11'
+  # gem 'capistrano-rails', '~> 1.3', '>= 1.3.1'
+  gem 'capistrano-rails', '~> 1.4'
+  # gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.3'
+  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
   gem 'capistrano-passenger', '~> 0.2.0'
 end
 

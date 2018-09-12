@@ -102,7 +102,9 @@ Central online place where  -->
   <div class="collapse navbar-collapse"  id="navbarToggler">
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
       <li class="nav-item" >
-        <%= link_to 'Home', welcome_home_path, class: "nav-link #{yield(:news_active)}" %>
+        <%= link_to welcome_home_path(@posts) do %>
+        <i class="fa fa-home fa-2x" style="" aria-hidden="true"></i>
+        <% end %>
       </li>
       <li class="nav-item" >
         <%= link_to 'Recent News', root_path, class: "nav-link #{yield(:news_active)}" %>
@@ -116,6 +118,9 @@ Central online place where  -->
       </li>
      <li class="nav-item">
         <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
+      </li>
+     <li class="nav-item">
+        <%= link_to 'Log In', author_session_path, class: "nav-link #{yield(:about_active)}" %>
       </li>
       <!-- <li class="nav-item">
         <%= link_to 'Projects', travel_path, class: "nav-link #{yield(:travel_active)}" %>

@@ -3,6 +3,9 @@
   font-weight: bolder;
   color: #f4511e !important;
 }
+a {
+  color: white;
+}
 .posts.index {
   .digg_pagination {
   .previous_page { background:#7777ff; color:white }
@@ -91,6 +94,7 @@
       // padding: 10px;
         ul {
       margin-bottom: 0;
+      padding-left: 0;
       font-size: .8rem;
     }
       ul li {
@@ -277,47 +281,10 @@ body {
     }
   }
 }
-
-section {
-   width: 100%;
-   float: right;
-   margin: 2% 2%;
-   text-align: center;
- }
-
- footer {
-   background: #0e1215;
-   width: 100%;
-   overflow: hidden;
-   opacity: 0.90;
- }
- footer p, footer h3 {
-   color: #FFF;
-   text-align: center;
- }
- footer p a {
-   color: #FFF;
-   text-decoration: none;
- }
-
- ul.social li {
-  display: inline;
-  }
- ul.social li img {
-   height: 30px;
- }
-
- .social {
-   .fa {
-     padding: 20px;
-     font: normal normal normal 44px FontAwesome;
-   }
-   text-align: center;
- }
- .fa-facebook, .fa-twitter {
-   font: normal normal normal 44px FontAwesome;
- }
-
+footer p, footer h3 {
+  color: #999;
+  text-align: center;
+}
 @media screen and (min-width: 34em) {
 
   .digg_pagination {
@@ -406,6 +373,7 @@ section {
 
 .fa-twitter {
     color: #00aced;
+    font-size: 1.6em;
 }
 
 /*Facebook*/
@@ -424,8 +392,11 @@ section {
     color: white;
 }
 
-.fa-facebook {
+.fa-facebook-f , .fa-facebook {
     color: #3b5998;
+}
+.fa-comments {
+    color: #f2f6fe;
 }
 
 /*Linkedin*/
@@ -712,3 +683,58 @@ h4 {
   }
 }
 // -----------------------------END HOME PAGE CSS--------------------------------------
+
+// footer
+footer.nb-footer {
+background: #222;
+border-top: 4px solid #b78c33; }
+footer.nb-footer .about {
+margin: 0 auto;
+margin-top: 40px;
+max-width: 1170px;
+text-align: center; }
+footer.nb-footer .about p {
+font-size: 13px;
+color: #999;
+margin-top: 30px; }
+footer.nb-footer .about .social-media {
+margin-top: 15px; }
+footer.nb-footer .about .social-media xl lx a {
+display: inline-block;
+width: 45px;
+height: 45px;
+line-height: 45px;
+border-radius: 50%;
+font-size: 16px;
+color: #b78c33;
+border: 1px solid rgba(255, 255, 255, 0.3); }
+footer.nb-footer .about .social-media xl lx a:hover {
+background: #b78c33;
+color: #fff;
+border-color: #b78c33; }
+footer.nb-footer .footer-info-single {
+margin-top: 30px; }
+footer.nb-footer .footer-info-single .title {
+color: #aaa;
+text-transform: uppercase;
+font-size: 16px;
+border-left: 4px solid #b78c33;
+padding-left: 5px; }
+footer.nb-footer .footer-info-single xl lx a {
+display: block;
+color: #aaa;
+padding: 2px 0; }
+footer.nb-footer .footer-info-single xl lx a:hover {
+color: #b78c33; }
+footer.nb-footer .footer-info-single p {
+font-size: 13px;
+line-height: 20px;
+color: #aaa; }
+footer.nb-footer .copyright {
+margin-top: 15px;
+background: #111;
+padding: 7px 0;
+color: #999; }
+footer.nb-footer .copyright p {
+margin: 0;
+padding: 0; }
