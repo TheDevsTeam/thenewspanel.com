@@ -22,6 +22,8 @@ class Post < ApplicationRecord
   friendly_id :title, use: :slugged
 
   belongs_to :category
+  validates :category, presence: true
+
   belongs_to :author
   has_many   :comments
 

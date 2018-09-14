@@ -26,8 +26,8 @@
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
-            <div class="field">
-              <%= form.collection_select :category_id, Category.all, :id, :name%>
+            <div class="field data-turbolinks="false"">
+              <%= form.collection_select :category_id, Category.all, :id, :name, {prompt: "Choose a category" }, input_html: { class: "dropdown-toggle" } %>
             </div>
           </li>
           <li class="list-group-item">
@@ -88,7 +88,7 @@
           <li class="list-group-item">
             <div class="actions">
               <%= form.submit "Save Post", class: 'btn btn-success btn-lg btn-block' %>
-            </div>
+            </div>  
           </li>
         </ul>
       </div>
