@@ -1,5 +1,5 @@
 # config valid for current version and patch releases of Capistrano
-# lock "~> 3.10.0"
+lock "~> 3.10.0"
 
 set :application, "thenewspanel.com"
 set :repo_url, "git@github.com:TheDevsTeam/thenewspanel.com.git"

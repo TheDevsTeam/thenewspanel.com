@@ -52,6 +52,7 @@ gem 'paperclip-av-transcoder', '~> 0.6.4'
 gem 'aws-sdk-s3', '~> 1.19'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'capistrano', '~> 3.11'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -70,11 +71,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 group :development do
-  # gem 'capistrano', '~> 3.10'
   gem 'capistrano', '~> 3.11'
-  # gem 'capistrano-rails', '~> 1.3', '>= 1.3.1'
   gem 'capistrano-rails', '~> 1.4'
-  # gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.3'
   gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
   gem 'capistrano-passenger', '~> 0.2.0'
 end
