@@ -26,8 +26,8 @@ set :deploy_to, '/home/deploy/thenewspanel.com'
 # Default value for :linked_files is []
 # append :linked_files, "config/database.yml", "config/secrets.yml"
 
-append :linked_files, "config/database.yml", "config/secrets.yml"
-append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
+set :linked_files, %w{config/database.yml", "config/secrets.yml}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 
 # Default value for linked_dirs is []
 # append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
