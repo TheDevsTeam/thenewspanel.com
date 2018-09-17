@@ -14,7 +14,7 @@ default: &default
 
 development:
   <<: *default
-  database: thenewspanel
+  database: thenewspanel_development
 
 test:
   <<: *default
