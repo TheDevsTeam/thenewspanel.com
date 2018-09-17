@@ -27,14 +27,24 @@ default: &default
 
 development:
   <<: *default
-  database: thenewspanel
+  database: thenewspanel_development
 
 test:
   <<: *default
-  database: thenewspanel
+  database: thenewspanel_development
     # db/test.sqlite3
+
+# production:
+#   <<: *default
+#   database: thenewspanel
+    # db/production.sqlite3
 
 production:
   <<: *default
-  database: thenewspanel
-    # db/production.sqlite3
+  host: localhost
+  adapter: postgresql
+  encoding: utf8
+  database: thenewspanel_production
+  pool: 5
+  username: <%= ENV['deploy'] %>
+  password: <%= ENV['password123456789'] %>

@@ -2,3 +2,84 @@ D, [2017-11-28T17:32:04.499282 #78320] DEBUG -- :   [1m[36mCategory Load (1.7m
 D, [2017-11-28T17:41:17.200418 #78414] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
 D, [2017-11-28T17:41:17.203726 #78414] DEBUG -- :   [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Best Of"], ["created_at", "2017-11-28 22:41:17.201088"], ["updated_at", "2017-11-28 22:41:17.201088"]]
 D, [2017-11-28T17:41:17.206160 #78414] DEBUG -- :   [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+D, [2018-09-17T18:39:19.933274 #71208] DEBUG -- :   [1m[35m (11.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2656595364178971180)[0m
+D, [2018-09-17T18:39:19.994063 #71208] DEBUG -- :   [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2018-09-17T18:39:20.024522 #71208] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (24.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+D, [2018-09-17T18:39:20.031481 #71208] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2018-09-17T18:39:20.058139 #71208] DEBUG -- :   [1m[35mSQL (25.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "production"], ["updated_at", "2018-09-17 22:39:20.031937"], ["key", "environment"]]
+D, [2018-09-17T18:39:20.060318 #71208] DEBUG -- :   [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+D, [2018-09-17T18:39:20.060714 #71208] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2656595364178971180)[0m
+D, [2018-09-17T18:55:13.137537 #71431] DEBUG -- :   [1m[35mSQL (39.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+D, [2018-09-17T18:55:13.158233 #71431] DEBUG -- :   [1m[35m (11.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "articles" CASCADE[0m
+D, [2018-09-17T18:55:13.185862 #71431] DEBUG -- :   [1m[35m (27.3ms)[0m  [1m[35mCREATE TABLE "articles" ("id" bigserial primary key, "title" character varying, "body" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+D, [2018-09-17T18:55:13.187730 #71431] DEBUG -- :   [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors" CASCADE[0m
+D, [2018-09-17T18:55:13.201049 #71431] DEBUG -- :   [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "authors" ("id" bigserial primary key, "name" character varying, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "bio" text)[0m
+D, [2018-09-17T18:55:13.210576 #71431] DEBUG -- :   [1m[35m (4.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_authors_on_email" ON "authors"  ("email")[0m
+D, [2018-09-17T18:55:13.217306 #71431] DEBUG -- :   [1m[35m (4.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_authors_on_reset_password_token" ON "authors"  ("reset_password_token")[0m
+D, [2018-09-17T18:55:13.218206 #71431] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories" CASCADE[0m
+D, [2018-09-17T18:55:13.225976 #71431] DEBUG -- :   [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+D, [2018-09-17T18:55:13.226990 #71431] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "ckeditor_assets" CASCADE[0m
+D, [2018-09-17T18:55:13.234001 #71431] DEBUG -- :   [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "ckeditor_assets" ("id" bigserial primary key, "data_file_name" character varying NOT NULL, "data_content_type" character varying, "data_file_size" integer, "data_fingerprint" character varying, "type" character varying(30), "width" integer, "height" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+D, [2018-09-17T18:55:13.240814 #71431] DEBUG -- :   [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX  "index_ckeditor_assets_on_type" ON "ckeditor_assets"  ("type")[0m
+D, [2018-09-17T18:55:13.243066 #71431] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+D, [2018-09-17T18:55:13.253457 #71431] DEBUG -- :   [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" bigserial primary key, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+D, [2018-09-17T18:55:13.258342 #71431] DEBUG -- :   [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+D, [2018-09-17T18:55:13.262277 #71431] DEBUG -- :   [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+D, [2018-09-17T18:55:13.268096 #71431] DEBUG -- :   [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs"  ("sluggable_id")[0m
+D, [2018-09-17T18:55:13.277434 #71431] DEBUG -- :   [1m[35m (4.9ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs"  ("sluggable_type")[0m
+D, [2018-09-17T18:55:13.278125 #71431] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts" CASCADE[0m
+D, [2018-09-17T18:55:13.288588 #71431] DEBUG -- :   [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "title" character varying, "body" text, "description" text, "slug" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "banner_image_url" character varying, "author_id" integer, "published" boolean DEFAULT 'f', "published_at" timestamp, "category_id" integer, "source" character varying, "url" character varying, "avatar" character varying, "avatars" json, "photo_file_name" character varying, "photo_content_type" character varying, "photo_file_size" bigint, "photo_updated_at" timestamp, "music_file_name" character varying, "music_content_type" character varying, "music_file_size" bigint, "music_updated_at" timestamp, "movie_file_name" character varying, "movie_content_type" character varying, "movie_file_size" bigint, "movie_updated_at" timestamp)[0m
+D, [2018-09-17T18:55:13.292430 #71431] DEBUG -- :   [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_author_id" ON "posts"  ("author_id")[0m
+D, [2018-09-17T18:55:13.296379 #71431] DEBUG -- :   [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_posts_on_slug" ON "posts"  ("slug")[0m
+D, [2018-09-17T18:55:13.297095 #71431] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "taggings" CASCADE[0m
+D, [2018-09-17T18:55:13.302883 #71431] DEBUG -- :   [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "taggings" ("id" bigserial primary key, "tag_id" bigint, "taggable_type" character varying, "taggable_id" bigint, "tagger_type" character varying, "tagger_id" bigint, "context" character varying(128), "created_at" timestamp)[0m
+D, [2018-09-17T18:55:13.311135 #71431] DEBUG -- :   [1m[35m (4.9ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_context" ON "taggings"  ("context")[0m
+D, [2018-09-17T18:55:13.319003 #71431] DEBUG -- :   [1m[35m (6.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "taggings_idx" ON "taggings"  ("tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type")[0m
+D, [2018-09-17T18:55:13.323881 #71431] DEBUG -- :   [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_tag_id" ON "taggings"  ("tag_id")[0m
+D, [2018-09-17T18:55:13.328889 #71431] DEBUG -- :   [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_taggable_id_and_taggable_type_and_context" ON "taggings"  ("taggable_id", "taggable_type", "context")[0m
+D, [2018-09-17T18:55:13.333711 #71431] DEBUG -- :   [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX  "taggings_idy" ON "taggings"  ("taggable_id", "taggable_type", "tagger_id", "context")[0m
+D, [2018-09-17T18:55:13.341196 #71431] DEBUG -- :   [1m[35m (4.2ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_taggable_id" ON "taggings"  ("taggable_id")[0m
+D, [2018-09-17T18:55:13.351949 #71431] DEBUG -- :   [1m[35m (4.0ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_taggable_type_and_taggable_id" ON "taggings"  ("taggable_type", "taggable_id")[0m
+D, [2018-09-17T18:55:13.363626 #71431] DEBUG -- :   [1m[35m (4.4ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_taggable_type" ON "taggings"  ("taggable_type")[0m
+D, [2018-09-17T18:55:13.371214 #71431] DEBUG -- :   [1m[35m (5.6ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_tagger_id_and_tagger_type" ON "taggings"  ("tagger_id", "tagger_type")[0m
+D, [2018-09-17T18:55:13.375103 #71431] DEBUG -- :   [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_tagger_id" ON "taggings"  ("tagger_id")[0m
+D, [2018-09-17T18:55:13.379025 #71431] DEBUG -- :   [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_tagger_type_and_tagger_id" ON "taggings"  ("tagger_type", "tagger_id")[0m
+D, [2018-09-17T18:55:13.379676 #71431] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "tags" CASCADE[0m
+D, [2018-09-17T18:55:13.387522 #71431] DEBUG -- :   [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "tags" ("id" bigserial primary key, "name" character varying, "taggings_count" integer DEFAULT 0)[0m
+D, [2018-09-17T18:55:13.396048 #71431] DEBUG -- :   [1m[35m (4.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_tags_on_name" ON "tags"  ("name")[0m
+D, [2018-09-17T18:55:13.401834 #71431] DEBUG -- :   [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+D, [2018-09-17T18:55:13.444338 #71431] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2018-09-17T18:55:13.451359 #71431] DEBUG -- :   [1m[35m (6.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180910190215)[0m
+D, [2018-09-17T18:55:13.453663 #71431] DEBUG -- :   [1m[35m (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20171107224858),
+(20171107225231),
+(20171108152220),
+(20171109031036),
+(20171109234259),
+(20171109234706),
+(20171112184929),
+(20171113205729),
+(20171113205730),
+(20171113205731),
+(20171113205732),
+(20171113205733),
+(20171113205734),
+(20171115224258),
+(20171117193045),
+(20171117193228),
+(20171119203359),
+(20171120185338),
+(20180902182439),
+(20180909192351),
+(20180909192902);
+
+[0m
+D, [2018-09-17T18:55:13.483152 #71431] DEBUG -- :   [1m[35m (23.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+D, [2018-09-17T18:55:13.488503 #71431] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+D, [2018-09-17T18:55:13.493594 #71431] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2018-09-17T18:55:13.497649 #71431] DEBUG -- :   [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "production"], ["created_at", "2018-09-17 22:55:13.494066"], ["updated_at", "2018-09-17 22:55:13.494066"]]
+D, [2018-09-17T18:55:13.499468 #71431] DEBUG -- :   [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+D, [2018-09-17T18:55:13.501588 #71431] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+D, [2018-09-17T18:55:13.507837 #71431] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+D, [2018-09-17T18:55:13.508923 #71431] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+D, [2018-09-17T18:55:13.544105 #71431] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
