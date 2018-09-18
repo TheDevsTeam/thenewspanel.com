@@ -83,3 +83,9 @@ D, [2018-09-17T18:55:13.501588 #71431] DEBUG -- :   [1m[36mActiveRecord::Inter
 D, [2018-09-17T18:55:13.507837 #71431] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
 D, [2018-09-17T18:55:13.508923 #71431] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
 D, [2018-09-17T18:55:13.544105 #71431] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2018-09-17T21:44:43.468207 #85278] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5371661191630037115)[0m
+D, [2018-09-17T21:44:43.499028 #85278] DEBUG -- :   [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2018-09-17T21:44:43.505474 #85278] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+D, [2018-09-17T21:44:43.511341 #85278] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2018-09-17T21:44:43.512904 #85278] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+D, [2018-09-17T21:44:43.513486 #85278] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5371661191630037115)[0m

@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
+  root to: 'newsroom/posts#index'
   get 'welcome/home'
 
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :authors
   resources :articles
-  root to: 'newsroom/posts#index'
 
   namespace :authors do
     get '/account' => 'accounts#edit', as: :account

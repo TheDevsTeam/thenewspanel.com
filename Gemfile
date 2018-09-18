@@ -75,7 +75,7 @@ group :development do
   gem 'capistrano-rails', '~> 1.4', require: false
   gem 'capistrano-bundler', '~> 1.3', require: false
   gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4', github: 'capistrano/rbenv', require: false
-  # gem 'capistrano-passenger', '~> 0.2.0'
+  gem 'capistrano-passenger', '~> 0.2.0'
 end
 
 group :production do
