@@ -7,7 +7,7 @@ set :repo_url, "git@github.com:TheDevsTeam/thenewspanel.com.git"
 # https://github.com/TheDevsTeam/thenewspanel.com.git
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-
+set :passenger_restart_with_touch, true
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
 

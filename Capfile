@@ -33,8 +33,8 @@ set :rbenv_ruby, '2.4.2'
 require "capistrano/bundler"
 require 'capistrano/rails'
 require "capistrano/passenger"
-require "capistrano/rails/migrations"
-require "capistrano/rails/assets"
+# require "capistrano/rails/migrations"
+# require "capistrano/rails/assets"
 
 # require "capistrano/rvm"
 # require "capistrano/chruby"
