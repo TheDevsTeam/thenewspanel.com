@@ -1,50 +1,18 @@
-# default: &default
-#   adapter: postgresql
-#   encoding: unicode
-#   username: deploy
-#   password: password123456789
-#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-#   timeout: 5000
-#
-# development:
-#   <<: *default
-#   database: thenewspanel_development
-#
-# test:
-#   <<: *default
-#   database: thenewspanel
-#
-# production:
-#   <<: *default
-#   database: thenewspanel
-#
-
-default: &default
+development:
+  database: thenewspanel
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
-development:
-  <<: *default
-  database: thenewspanel_development
-
 test:
-  <<: *default
-  database: thenewspanel_development
-    # db/test.sqlite3
-
-# production:
-#   <<: *default
-#   database: thenewspanel
-    # db/production.sqlite3
+  database: thenewspanel
 
 production:
-  <<: *default
   host: localhost
   adapter: postgresql
   encoding: utf8
   database: thenewspanel_production
   pool: 5
   username: <%= ENV['deploy'] %>
-  password: <%= ENV['password123456789'] %>
+  password: <%= ENV['boomboom0'] %>
