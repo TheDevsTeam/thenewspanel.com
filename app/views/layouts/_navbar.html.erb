@@ -19,9 +19,9 @@
           </li>
           <% end %>
         </li>
-        <li class="list-group-item">
+        <!-- <li class="list-group-item">
           <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
-        </li>
+        </li> -->
         <% if author_signed_in? %>
 
         <li class="list-group-item dropdown">
@@ -107,11 +107,11 @@ Central online place where  -->
         <% end %>
       </li>
       <li class="nav-item" >
-        <%= link_to 'Recent News', root_path, class: "nav-link #{yield(:news_active)}" %>
+        <%= link_to 'Recent Posts', root_path, class: "nav-link #{yield(:news_active)}" %>
       </li>
-     <li class="nav-item">
+     <!-- <li class="nav-item">
         <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
-      </li>
+      </li> -->
      <li class="nav-item">
         <%= link_to 'Log In', author_session_path, class: "nav-link #{yield(:about_active)}" %>
       </li>
