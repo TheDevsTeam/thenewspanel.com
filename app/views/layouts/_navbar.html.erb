@@ -112,9 +112,6 @@ Central online place where  -->
      <!-- <li class="nav-item">
         <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
       </li> -->
-     <li class="nav-item">
-        <%= link_to 'Log In', author_session_path, class: "nav-link #{yield(:about_active)}" %>
-      </li>
       <li class="nav-item">
         <% Category.all.each do |category| %>
         <li class="nav-item">
